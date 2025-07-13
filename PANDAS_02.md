@@ -105,43 +105,86 @@ dept_summary
 ```
 ***Exercise 16***
 ```sql
-
+SELECT e.first_name, e.last_name, d.budget
+FROM employees e
+JOIN departments d ON e.dept = d.dname
+WHERE d.budget > 200000;
 ```
 
 ```python
-
+merged = employees.merge(departments, left_on='dept', right_on='dname')
+merged = merged[['first_name', 'last_name', 'budget']]
+merged = merged[merged['budget'] > 200000]
+merged
 ```
 ***Exercise 17***
 ```sql
-
+SELECT dept, AVG(salary) as avg_salary
+FROM employees
+WHERE salary IS NOT NULL
+GROUP BY dept
+HAVING COUNT(*) > 1;
 ```
 
 ```python
-
+employees_grouped = employees[employees['salary'].notna()]
+employees_grouped = employees_grouped.groupby('dept')['salary'].agg(['mean', 'count'])
+employees_grouped = employees_grouped[employees_grouped['count'] > 1]
+employees_grouped = employees_grouped['mean']
+employees_grouped
 ```
 ***Exercise 18***
 ```sql
-
+SELECT e.first_name, e.last_name, e.salary, e.dept
+FROM employees e
+JOIN (
+    SELECT dept, AVG(salary) as avg_salary
+    FROM employees
+    WHERE salary IS NOT NULL
+    GROUP BY dept
+) dept_avg ON e.dept = dept_avg.dept
+WHERE e.salary > dept_avg.avg_salary;
 ```
 
 ```python
-
+outer = employees[['first_name', 'last_name', 'salary', 'dept']]
+outer
+inner = employees[employees['salary'].notna()]
+inner = inner.groupby('dept')['salary'].agg(['mean'])
+outer = outer.merge(inner, on='dept', how='left')
+outer = outer[outer['salary'] > outer['mean']]
+outer
 ```
 ***Exercise 19***
 ```sql
-
+SELECT dept, SUM(salary) as total_salary
+FROM employees
+WHERE salary IS NOT NULL
+GROUP BY dept
+ORDER BY total_salary DESC
+LIMIT 1;
 ```
 
 ```python
-
+# Step 1: Filter the employees dataframe to remove nulls
+filtered_df = employees[employees['salary'].notna()]
+# Step 2: Group the filtered dataframe  
+result = filtered_df.groupby('dept')['salary'].agg(['sum'])
+result = result.sort_values(['sum'], ascending=False)
+result.head(1)
 ```
 ***Exercise 20***
 ```sql
-
+SELECT first_name, last_name, salary
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees WHERE salary IS NOT NULL);
 ```
 
 ```python
-
+more = employees[employees['salary'].notna()]
+meansalary = more['salary'].agg('mean')
+result = more[['first_name', 'last_name', 'salary']]
+result
 ```
 
 
