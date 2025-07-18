@@ -1,258 +1,210 @@
 # Data Analytics Mastery Program
 
-*Sustainable skill development through integrated learning*
+*Comprehensive skill development program with realistic milestones and execution-ready structure*
 
 ## 🎯 Program Objectives
 
-- **Primary Goal:** Interview-ready fluency by December 1st, portfolio completion by January 15th
+- **Primary Goal:** Interview-ready fluency by December 1st, 2025, polished portfolio by January 15th, 2026
 - **Technical Stack:** SQL, Python/Pandas, Data Visualization, Statistics
-- **Time Investment:** 400-450 hours (20-25 hours/week)
-- **Methodology:** Deep integration over drill exhaustion
-- **Core Principle:** Understanding > Coverage
+- **Time Investment:** 470 hours (≈30 hours/week for 16 weeks + 12% buffer)
+- **Methodology:** Depth over breadth with spaced retrieval and failure analysis
+- **Current Status:** Foundation Phase Complete - Advanced Skills Development Active
 
-## 📊 Skills Development Framework
+## 📊 Realistic Skills Development Framework
 
 ### SQL Proficiency Track
 ```
 SQL Fundamentals        ████████████████████ 100% (140/140)
-  ├── SELECT/WHERE      ████████████████████ Complete
-  ├── GROUP BY/HAVING   ████████████████████ Complete
-  ├── INNER/LEFT JOINS  ████████████████████ Complete
-  ├── Self-JOINs        ████████████████████ Complete
-  └── Window Functions  ████████████████████ Complete
+  ├── SELECT/WHERE      ████████████████████ Complete (40 drills)
+  ├── GROUP BY/HAVING   ████████████████████ Complete (40 drills)  
+  ├── INNER/LEFT JOINS  ████████████████████ Complete (30 drills)
+  ├── Self-JOINs        ████████████████████ Complete (20 drills)
+  └── Window Functions  ████████████████████ Complete (10 drills)
 
-Interview Readiness     ░░░░░░░░░░░░░░░░░░░░   0% (0/60)
-  ├── UNION/CTEs        ░░░░░░░░░░░░░░░░░░░░   0% (0/20)
+Advanced SQL            ░░░░░░░░░░░░░░░░░░░░   0% (0/90)
+  ├── UNION/Set Ops     ░░░░░░░░░░░░░░░░░░░░   0% (0/20)
+  ├── CTEs/Recursive    ░░░░░░░░░░░░░░░░░░░░   0% (0/25)
   ├── Query Optimization ░░░░░░░░░░░░░░░░░░░░   0% (0/15)
-  ├── Real-world Patterns ░░░░░░░░░░░░░░░░░░░░   0% (0/15)
-  └── Explanation Practice ░░░░░░░░░░░░░░░░░░░░   0% (0/10)
+  ├── Indexing & EXPLAIN ░░░░░░░░░░░░░░░░░░░░   0% (0/15)
+  └── Real-world Scenarios ░░░░░░░░░░░░░░░░░░░░   0% (0/15)
 ```
-**Focus:** Fluent explanation and pattern recognition over drill count
+**Target:** 230 total SQL exercises (35 hours additional work)
+**Focus:** Multi-DB edge cases, performance optimization, production-ready queries
 
 ### Python/Pandas Mastery Track
 ```
-Pandas Fundamentals     ████░░░░░░░░░░░░░░░░  20% (30/150)
-Real-world Fluency      ░░░░░░░░░░░░░░░░░░░░   0% (0/50)
-Integration with SQL    ░░░░░░░░░░░░░░░░░░░░   0% (0/20)
+Quick-Syntax Drills     ████░░░░░░░░░░░░░░░░  20% (30/150)
+Mid-Depth Tasks         ░░░░░░░░░░░░░░░░░░░░   0% (0/90)
+Performance Deep-Dives  ░░░░░░░░░░░░░░░░░░░░   0% (0/40)
 ```
-**Focus:** Method chaining and real-world patterns over exercise completion
+**Structure:** 150 × ~12 min, 90 × ~40 min, 40 × ~75 min = 140 hours total
+**Current Status:** Phase 1 exposure complete - fluency requires 3-5x more practice
+**Performance Target:** ≥40% memory reduction on all deep-dive exercises
 
 ### Data Visualization Track
 ```
-Core Chart Types        ░░░░░░░░░░░░░░░░░░░░   0% (0/40)
-Storytelling            ░░░░░░░░░░░░░░░░░░░░   0% (0/20)
-Portfolio Pieces        ░░░░░░░░░░░░░░░░░░░░   0% (0/10)
+Core Charts             ░░░░░░░░░░░░░░░░░░░░   0% (0/25)
+Interactive Dashboards  ░░░░░░░░░░░░░░░░░░░░   0% (0/2)
+  ├── Exploratory       ░░░░░░░░░░░░░░░░░░░░   0% (0/1)
+  └── KPI/Executive     ░░░░░░░░░░░░░░░░░░░░   0% (0/1)
 ```
-**Focus:** Clear communication over library coverage
+**Target:** 25 charts + 2 Streamlit/Plotly dashboards (<1s load time)
+**Priority:** Medium overall, but dashboards are portfolio centerpieces
 
 ### Statistical Analysis Track
 ```
-Statistical Thinking    ░░░░░░░░░░░░░░░░░░░░   0% (0/40)
-A/B Testing Project     ░░░░░░░░░░░░░░░░░░░░   0% (0/1)
-Regression Project      ░░░░░░░░░░░░░░░░░░░░   0% (0/1)
+Statistics Drills       ░░░░░░░░░░░░░░░░░░░░   0% (0/60)
+Applied Projects        ░░░░░░░░░░░░░░░░░░░░   0% (0/2)
+  ├── A/B Test (end-to-end) ░░░░░░░░░░░░░░░░░░░░   0% (0/1)
+  └── Regression Analysis   ░░░░░░░░░░░░░░░░░░░░   0% (0/1)
 ```
-**Focus:** Applied judgment over formula memorization
+**Target:** 60 exercises + 2 projects (15h each including power analysis & diagnostics)
+**Focus:** Applied inference judgment beyond formula application
 
 ### Portfolio Development Track
 ```
-Integrated Projects     ████░░░░░░░░░░░░░░░░  25% (1/4)
-Interview Stories       ░░░░░░░░░░░░░░░░░░░░   0% (0/4)
+Integrated Projects     ██░░░░░░░░░░░░░░░░░░  25% (1/4)
+Failure Post-mortems    ░░░░░░░░░░░░░░░░░░░░   0% (0/3)
 ```
-**Focus:** 4 stellar projects over 8 mediocre ones
+**Target:** 4 deep projects + 3 documented failures (temporal leakage, label leakage, Simpson's paradox)
+**Approach:** Each project integrates SQL→Pandas→Viz→Stats into coherent narrative
 
-## 🏆 Progress Tracking System
+## 🎯 Work Breakdown (470 Hours Total)
+
+| Category | Hours | Priority | Notes |
+|----------|-------|----------|-------|
+| SQL Advanced & review | 35 | High | UNION, CTEs, optimization, indexing, EXPLAIN |
+| Pandas (all buckets) | 140 | High | True fluency + memory profiling |
+| Visualization & dashboards | 45 | Medium | 25 charts + 2 interactive dashboards |
+| Statistics drills + projects | 60 | High | 60 drills + A/B test + regression |
+| Portfolio builds + post-mortems | 60 | High | 4 integrated + 3 failure analyses |
+| Interview prep | 20 | Critical | 4 mock interviews + concept drills |
+| Spaced-repetition cycles | 60 | Critical | Re-solve every 8th drill +14 days |
+| **Buffer (12%)** | 50 | — | Debugging, iteration, illness |
+
+## 🚦 Non-Negotiable Requirements
+
+### ✅ Critical Success Factors
+- **Spaced Repetition:** Re-solve every 8th drill +14 days after completion (Anki/custom script)
+- **Performance Focus:** SQL EXPLAIN before/after indexing; Pandas memory reduction ≥40%
+- **Dashboard Deliverable:** Two Streamlit/Plotly apps (<1s load) - exploratory + KPI
+- **Mock Interviews:** 4 sessions booked Weeks 17-20
+- **Failure Analysis:** Document 3 canned failure scenarios with recovery playbooks
+
+### 🔒 Quality Standards Over Quantity
+- **SQL:** Complete coverage including performance optimization and multi-DB scenarios
+- **Pandas:** Memory-efficient code with vectorization, chunksize awareness
+- **Visualization:** Professional storytelling with <1s load performance
+- **Statistics:** Applied inference judgment with power analysis
+- **Portfolio:** Interview-ready depth, documented failures and learnings
+
+## 📊 Current Progress Assessment
 
 ### Current Status
-- **Foundation:** SQL basics mastered, Pandas exposure complete
-- **Hours Invested:** 100 hours
-- **Weekly Average:** 24.5 hours/week (target: 20-25)
-- **Energy Level:** Monitoring needed to prevent burnout
+- **Skill Level:** Foundation Phase Complete (Level 2/10)  
+- **True Competency:** 5% toward hiring-ready capability
+- **Time Investment:** 100/470 hours (21% complete)
+- **Weekly Pace:** 24.5 hours (need 30 hours minimum)
 
-### Completed Milestones
-- ✅ **SQL Foundation** - Strong base for advanced concepts
-- ✅ **Pandas Exposure** - Ready for deeper integration
-- ✅ **First Portfolio Project** - Employee performance analysis
-- ✅ **Learning Rhythm** - Established consistent practice
+### Completed Foundation
+- ✅ **SQL Core Competency** - 140 drills across all fundamental patterns
+- ✅ **Pandas Exposure** - 30 exercises (sufficient for next phase)
+- ✅ **First Portfolio Project** - Employee performance analysis with insights
+- ✅ **Professional Structure** - Repository organization and documentation
 
-### Next Phase: Integrated Learning Blocks
-- 🎯 **Weeks 5-8:** E-commerce deep dive (SQL→Pandas→Viz→Story)
-- 🎯 **Weeks 9-12:** A/B testing mastery (Stats→Design→Analysis)
-- 🎯 **Weeks 13-16:** ML fundamentals (Feature→Model→Impact)
+### Critical Path Forward
+- 🎯 **SQL Advanced** - UNION (15_union.sql), CTEs (16_cte.sql), optimization
+- 🎯 **Pandas Fluency** - 250 more exercises for real competence
+- 🎯 **Visualization** - 25 charts + 2 dashboards with performance requirements
+- 🎯 **Mock Interview Prep** - Schedule sessions NOW, don't defer
 
-## 🧠 Sustainable Learning Framework
+## 📈 Realistic Timeline
 
-### The 3-2-1 Weekly Rhythm
-| Day | Type | Hours | Focus |
-|-----|------|-------|-------|
-| Mon | Deep | 4-5 | New concepts, challenging work |
-| Tue | Light | 2-3 | Review, consolidation |
-| Wed | Deep | 4-5 | Application, practice |
-| Thu | Light | 2-3 | Reading, exploration |
-| Fri | Deep | 4-5 | Integration across skills |
-| Sat | Integration | 3-4 | Project work, synthesis |
-| Sun | Recovery | 0 | Complete rest |
+### Phase 2: Advanced Skills (Weeks 5-12)
+| Weeks | Core Focus | Secondary Thread |
+|-------|------------|------------------|
+| 5-6 | SQL Advanced (UNION, CTE) | Pandas quick drills |
+| 7-8 | Pandas mid-depth + First perf deep-dive | SQL spaced-rep |
+| 9-10 | Statistics drills + A/B project scaffold | Perf deep-dive #2 |
+| 11-12 | Dashboard A (exploratory) | Stats project wrap |
 
-**Total:** 20-25 hours/week with built-in recovery
+### Phase 3: Integration (Weeks 13-16)
+| Weeks | Core Focus | Secondary Thread |
+|-------|------------|------------------|
+| 13-14 | Portfolio projects #2-3 | Dashboard B |
+| 15-16 | Portfolio #4 + 3 failure docs | Mock-prep warm-ups |
 
-### Energy Management Protocol
-- Daily energy check (1-10 scale)
-- Stop if energy < 6/10
-- One recovery week every 4 weeks (40% intensity)
-- No guilt about rest days - they're part of the plan
+### Phase 4: Interview Ready (Weeks 17-20)
+- **Week 17-18:** Mock interviews + concept explainers
+- **Week 19-20:** Final portfolio polish + CV refinement
 
-## 📈 Integrated Learning Blocks
+*Buffers absorbed continuously — no hero sprints at the end*
 
-### Current Block: Weeks 5-8 (E-commerce Analysis)
-**Unified Dataset:** Online retail transactions
+## 🔥 Time Management Reality
 
-| Week | Focus | Key Deliverables |
-|------|-------|------------------|
-| 5 | Advanced SQL | CTEs, UNION, optimization on retail data |
-| 6 | Pandas Translation | Same analyses in Pandas, performance comparison |
-| 7 | Visual Storytelling | 20 charts telling the business story |
-| 8 | Recovery & Polish | Integration, reflection, project polish |
+### Current Performance
+- **Hours Logged:** 100/470 hours (21% complete)
+- **Required Pace:** 30 hours/week consistently  
+- **No-Slip Tolerance:** Missing one week requires 35+ hour recovery
+- **Buffer Usage:** 50 hours for debugging, illness, iteration
 
-### Quality Gates (Not Quantity)
-**Week 8 Checkpoint:**
-- [ ] Can explain CTEs vs subqueries to a colleague
-- [ ] Chose SQL vs Pandas correctly 5 times (document reasoning)
-- [ ] Created one compelling data story about the business
+### Success Indicators
+- ✅ **Spaced repetition system** operational by Week 6
+- ✅ **Mock interviews** scheduled by Week 5
+- ✅ **Interactive dashboard** deployed by Week 10
+- ✅ **Performance profiling** demonstrated by Week 8
 
-## 📊 Revised Timeline
-
-### Phase 1: Foundation ✅ (Weeks 1-4)
-- SQL fundamentals mastered
-- Pandas basics explored
-- First project completed
-
-### Phase 2: Integration Focus (Weeks 5-16)
-- **Weeks 5-8:** E-commerce deep dive
-- **Weeks 9-12:** A/B testing mastery
-- **Weeks 13-16:** Predictive modeling
-
-### Phase 3: Interview Prep (Weeks 17-20)
-- Concept explanation practice
-- Whiteboard problem solving
-- Portfolio storytelling
-
-### Phase 4: Portfolio Polish (Weeks 21-24)
-- Project refinement
-- Documentation
-- Presentation prep
-
-## 📁 Simplified Repository Structure
+## 📁 Repository Evolution
 
 ```
-data-analytics-journey/
-├── integrated-projects/
-│   ├── 01-ecommerce-analysis/
-│   │   ├── data/
-│   │   ├── sql/
-│   │   ├── notebooks/
-│   │   ├── visualizations/
-│   │   └── insights.md
-│   ├── 02-ab-test-design/
-│   ├── 03-churn-prediction/
-│   └── 04-business-dashboard/
-├── skill-development/
-│   ├── sql-patterns/
-│   ├── pandas-cookbook/
-│   └── stats-intuition/
-├── interview-prep/
-│   ├── concepts-explained/
-│   ├── whiteboard-solutions/
-│   └── behavioral-stories.md
-└── learning-journal/
-    ├── weekly-reflections/
-    └── energy-tracking.csv
+sql-dailies/
+├── sql/                          # 140/230 SQL exercises
+│   ├── 01-14_complete.sql       # ✅ Foundation (140 drills)
+│   └── advanced/
+│       ├── 15_union_operations.sql     # 🔄 NEXT: Set operations (20 drills)
+│       ├── 16_cte_fundamentals.sql     # 🔄 Common table expressions (25 drills)
+│       ├── 17_query_optimization.sql   # 🔄 Performance & indexing (15 drills)
+│       ├── 18_indexing_plans.sql       # 🔄 EXPLAIN analysis (15 drills)
+│       └── 19_realworld_cases.sql      # 🔄 Multi-DB scenarios (15 drills)
+├── pandas/                       # 30/280 Pandas exercises
+│   ├── drills_quick/            # 🔄 150 files (12 min each)
+│   ├── drills_mid/              # 🔄 90 notebooks (40 min each)
+│   └── deep_dives_perf/         # 🔄 40 case studies (75 min each)
+├── analysis/                     # 1/4 Portfolio projects
+│   ├── employee-analysis/        # ✅ Business performance analysis
+│   ├── project-02_customer-seg/  # 🔄 End-to-end segmentation
+│   ├── project-03_revenue-forecast/ # 🔄 Time series project
+│   ├── project-04_ab-framework/     # 🔄 Statistical inference framework
+│   └── failures/
+│       ├── temporal_leakage.md      # 🔄 Date-based data leakage
+│       ├── label_leakage.md         # 🔄 Target variable contamination
+│       └── simpsons_paradox.md      # 🔄 Aggregation reversal
+├── visualizations/               # 0/27 Visualizations
+│   ├── charts/                  # 🔄 25 core visualizations
+│   └── dashboards/
+│       ├── exploratory/         # 🔄 Streamlit data explorer
+│       └── kpi/                 # 🔄 Executive dashboard
+└── statistics/                   # 0/62 Statistics work
+    ├── drills/                  # 🔄 60 exercises
+    └── projects/                # 🔄 A/B test + regression analysis
 ```
-
-## 🎯 Success Metrics (Revised)
-
-### December 1st: Interview Ready
-**Can Fluently Discuss:**
-- ✓ SQL optimization strategies
-- ✓ When to use different tools
-- ✓ Statistical significance vs practical importance
-- ✓ Data visualization best practices
-- ✓ Project outcomes and learnings
-
-**Can Demonstrate:**
-- ✓ Write efficient SQL queries on whiteboard
-- ✓ Debug Pandas transformations
-- ✓ Explain analysis methodology
-- ✓ Discuss business impact of findings
-
-**Portfolio Status:**
-- 3 integrated projects complete
-- 1 in final polish stage
-- All with clear business narratives
-
-### January 15th: Fully Ready
-- 4 polished portfolio projects
-- Interview stories practiced
-- References prepared
-- Ready to negotiate offers
-
-## 🚀 This Week's Focus (Week 5)
-
-### Monday - Deep Day (4-5 hours)
-```sql
--- Morning: UNION operations on e-commerce data
--- 5 progressive examples building complexity
--- Document use cases and performance
-
--- Afternoon: Introduction to CTEs
--- Transform UNION queries using CTEs
--- Compare readability and performance
-```
-
-### Tuesday - Light Day (2-3 hours)
-- Review Monday's patterns
-- Read 2 articles on SQL best practices
-- No new concepts
-
-### Wednesday - Deep Day (4-5 hours)
-```sql
--- Advanced CTE patterns
--- Recursive CTEs for hierarchical data
--- Query optimization techniques
--- Start Pandas equivalents
-```
-
-### Thursday - Light Day (2-3 hours)
-- Consolidate CTE knowledge
-- Find real-world CTE examples
-- Light practice only
-
-### Friday - Deep Day (4-5 hours)
-```python
-# Translate SQL analyses to Pandas
-# Document SQL→Pandas mappings
-# Performance comparisons
-# Method chaining practice
-```
-
-### Saturday - Integration (3-4 hours)
-- Create "SQL to Pandas Rosetta Stone"
-- Begin e-commerce insight summary
-- Plan Week 6 focus
-
-### Sunday - Complete Rest
-- No coding, no guilt
-- Light technical reading if desired
-
-## 💡 Key Principles
-
-1. **Energy > Hours**: Track energy, not just time
-2. **Integration > Isolation**: One dataset, multiple tools
-3. **Understanding > Coverage**: Depth beats breadth
-4. **Stories > Stats**: Every analysis needs a narrative
-5. **Health > Heroics**: Sustainable pace wins
 
 ---
 
-*Remember: You're building a career, not rushing to a deadline. Every concept deeply understood, every project thoughtfully completed, every healthy habit maintained - these compound into lasting expertise.*
+Immediate 72 h list
 
-**Current Status: Sustainable Development Phase**
-**Next Review: Week 8 Quality Gate**
+    Book 4 mock‑interview slots.
+
+    Deploy spaced‑rep script and seed with 20 finished SQL drills.
+
+    Complete 15_union_operations.sql and record EXPLAIN before/after indexing.
+
+    Draft Streamlit wire‑frame for Dashboard A (no data yet).
+
+    Log time & energy daily; verify ≥ 6/10 energy on deep‑work days.
+
+---
+
+*This program emphasizes measurable progress through practical application. The 470-hour target includes necessary buffer time for deep learning, iteration, and real-world complexity. Success is measured by interview readiness and portfolio quality, not exercise completion.*
+
+**Remember: Execution beats planning. Start with those 72-hour orders NOW.**
