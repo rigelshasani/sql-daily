@@ -106,7 +106,31 @@ emp
 ```
 
 ```python
-# Your solution here
+# Copy original & Get hire year & Get today's date -> Calculate tenure years
+emp = employees[employees['dept'].notna()].copy()
+emp['hire_year'] = pd.to_datetime(emp['hire_date']).dt.year
+today = pd.to_datetime('2025-07-18')
+emp['tenure_years'] = (today - pd.to_datetime(emp['hire_date'])).dt.days / 365.25
+grouped_tenure = emp.groupby('dept').agg({'tenure_years' : 'mean'})
+# Get employees after 2020, count groups by dept & count all emps grouped by dept
+recent_hires = emp[emp['hire_year'] > 2020]
+filterfirst = recent_hires.groupby('dept').size()
+total_per_dept = emp.groupby('dept').size()
+# Get percentage by comparing small groups to big groups
+turnover_pct = (filterfirst / total_per_dept * 100).fillna(0)
+# Create copy
+merged = grouped_tenure.copy()
+# Assign series to column
+merged['Turnover%'] = turnover_pct
+# Since dept is the index and not a column, we assign the "index" instead of the values to all_depts
+all_depts = merged.index
+# Group by dept, get salary averages, reindex by the dept names we got earlier and fill NA values with 0
+recent_salaries = recent_hires.groupby('dept')['salary'].mean().reindex(all_depts, fill_value=0)
+merged['Avg Salary (Recent)'] = recent_salaries
+# Same approach but for old salaries
+old_salaries = (emp[emp['hire_year'] <= 2020]).groupby('dept')['salary'].mean().reindex(all_depts, fill_value=0)
+merged['Avg Salary (Veteran)'] = old_salaries
+merged
 ```
 
 ---
@@ -120,7 +144,24 @@ emp
 ```
 
 ```python
-# Your solution here
+merged = employees.merge(departments, left_on=('dept'), right_on=('dname'))
+merged['Salary%ofBudget'] = (merged['salary'] / merged['budget']) * 100
+merged['FlagMoreThan20%'] = np.where(merged['Salary%ofBudget'] > 20, 'Yes', 'No')
+deptUtil = (merged.groupby('dept')['salary'].sum() / merged.groupby('dept')['budget'].mean()) * 100
+# 2 SOLUTIONS BELOW!
+#EITHER this
+merged['Department Utilization'] = merged['dept'].map(deptUtil)
+#OR this with merge
+deptUtil_df = deptUtil.to_frame('Department Utilization')
+merged = merged.merge(deptUtil_df, on='dept')
+
+# PICK ONE OR IT WONT WORK WITH BOTH LOL
+
+# Round for readability
+merged['Salary%ofBudget'] = merged['Salary%ofBudget'].round(1)
+merged['Department Utilization'] = merged['Department Utilization'].round(1)
+
+merged
 ```
 
 ---
