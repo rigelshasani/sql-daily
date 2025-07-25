@@ -176,7 +176,16 @@ merged
 ```
 
 ```python
-# Your solution here
+emp = employees.copy()
+mgr = employees.copy()
+emp = emp.merge(mgr, left_on='manager_id', right_on='id', how='inner',  suffixes=('_emp', '_mgr'))
+ratio = emp[['first_name_emp','last_name_emp', 'first_name_mgr','last_name_mgr', 'salary_emp', 'salary_mgr', 'id_emp', 'manager_id_emp']]
+summary = ratio.copy()
+summary['ratio'] = summary['salary_emp'] / summary['salary_mgr']
+gommi = summary.groupby('manager_id_emp')['first_name_emp'].count().reset_index(name='direct_reports_count')
+summary = summary.merge(gommi, on='manager_id_emp')
+summary['flag'] = np.where(summary['salary_emp'] > summary['salary_mgr'], 'Yes', 'No')
+summary
 ```
 
 ---
@@ -190,7 +199,15 @@ merged
 ```
 
 ```python
-# Your solution here
+medianbydept = employees.groupby('dept')['salary'].median()
+medianbydept
+emp = employees.copy()
+emp = emp.merge(medianbydept, on='dept', suffixes=('','_median'))
+yup = emp[(emp['salary'] > 1.5 * emp['salary_median']) | (emp['salary'] < 0.5 * emp['salary_median'])]
+yup['relation_to_median'] = (yup['salary'] - yup['salary_median']) / yup['salary_median'] * 100
+counts = yup.merge(emp.groupby('dept')['first_name'].count(), on='dept')
+counts = counts[counts['first_name_y'] > 2]
+counts
 ```
 
 
@@ -208,7 +225,14 @@ merged
 ```
 
 ```python
-# Your solution here
+depts = employees[['first_name', 'salary', 'dept', 'hire_date']]
+depts = depts[depts['salary'].notna()]
+depts = depts.sort_values('hire_date')
+depts['running_salary'] = depts.groupby('dept')['salary'].cumsum()
+depts['running_200k'] = np.where(depts['running_salary'] > 200000, 'Passed', 'Not-Passed')
+depts['running_count'] = depts.groupby('dept').cumcount() + 1
+depts['running_avg'] = depts['running_salary'] / depts['running_count']
+depts
 ```
 
 ---
@@ -223,7 +247,16 @@ merged
 ```
 
 ```python
-# Your solution here
+de = employees[['dept', 'salary']]
+de = de[de['salary'].notna()]
+de = de.groupby('dept').agg({'salary':'mean'})
+de = de.reset_index()
+de2 = de.copy()
+de2 = de.merge(de2,  how='cross')
+de2 = de2[(de2['salary_x'] != de2['salary_y']) & (de2['dept_x'] < de2['dept_y'])]
+de2['difference'] = abs(de2['salary_y'] - de2['salary_x'])
+de2['which_pays_more'] = np.where(de2['salary_y'] - de2['salary_x'] > 0, de2['dept_y'], de2['dept_x'])
+de2['ratio'] = de2['salary_x'] / de2['salary_y']
 ```
 
 ---
@@ -245,55 +278,3 @@ merged
 
 ---
 
-## Solution Guidelines
-
-### For Exercise 31 (Multiple Aggregations):
-- Use `.agg()` with multiple functions
-- Boolean filtering on aggregated results
-- Remember to handle NaN values
-
-### For Exercise 32 (Performance Tiers):
-- Convert hire_date to datetime first
-- Calculate dept averages, then merge back
-- Use `np.select()` for multiple conditions
-
-### For Exercise 33 (Ranking):
-- Use `.rank(method='dense', ascending=False)`
-- `.shift()` within groups for gap calculation
-- Filter with boolean indexing
-
-### For Exercise 34 (Time-Based):
-- Calculate tenure with datetime operations
-- Use `.value_counts(normalize=True)` for percentages
-- Pivot or groupby with multiple keys
-
-### For Exercise 35 (Budget Analysis):
-- Merge on dept/dname
-- Calculate percentages with vectorized operations
-- Use `.assign()` for clean column creation
-
-### For Exercise 36 (Hierarchical):
-- Self-merge on manager_id = id
-- Handle NaN managers appropriately
-- Count with `.value_counts()` or `.groupby().size()`
-
-### For Exercise 37 (Outliers):
-- Calculate median per dept with `.transform()`
-- Filter groups with `.filter(lambda x: len(x) >= 3)`
-- Calculate percentage differences
-
-### For Exercise 38 (Cumulative):
-- Sort by dept and hire_date first
-- Use `.cumsum()` and `.expanding().mean()`
-- Boolean column for threshold crossing
-
-### For Exercise 39 (Cross-Department):
-- Create cartesian product with merge
-- Filter to avoid duplicates (dept1 < dept2)
-- Calculate ratios with safe division
-
-### For Exercise 40 (Comprehensive):
-- Multiple groupby operations
-- Combine results with merge/join
-- Use `.nlargest(2)` for top earners
-- Present cleanly with proper column names
