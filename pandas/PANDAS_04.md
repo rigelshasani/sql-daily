@@ -273,7 +273,34 @@ de2['ratio'] = de2['salary_x'] / de2['salary_y']
 ```
 
 ```python
-# Your solution here
+emp_report = employees[['first_name', 'last_name', 'dept', 'salary', 'hire_date']]
+emp_report = emp_report.merge(departments, left_on='dept', right_on='dname')
+emp_report = emp_report.drop('dname', axis=1)
+emp_report.columns = ['first_name', 'last_name', 'dept', 'salary', 'hire_date', 'dept_budget']
+emp_report_grouped = emp_report.groupby('dept').agg(
+    avg_salary = ('salary','mean'), 
+    median_salary = ('salary','median'), 
+    std_salary = ('salary','std'))
+emp_report['hire_year'] = pd.to_datetime(emp_report['hire_date']).dt.year
+counter = emp_report.groupby(['dept','hire_year']).agg(emp_hired_that_year = ('salary','count'))
+counter = counter.unstack(level='hire_year')
+counter.columns
+counter.columns = ['hired_' + str(col[1]) for col in counter.columns]
+counter = counter.fillna(0)
+emp_report_grouped = emp_report_grouped.join(counter)
+utilized = emp_report.groupby('dept').agg({'salary':'sum', 'dept_budget':'sum'})
+counter = counter.join(utilized, on='dept')
+counter
+counter['utilized_percentage'] = (
+    (counter['salary'] / counter['dept_budget'] * 100)
+    .round(2).astype(str) + '%'
+)
+counter
+
+extra = counter[['salary', 'dept_budget', 'utilized_percentage']].rename(columns={'salary': 'total_salary'})
+emp_report_grouped = emp_report_grouped.join(extra)
+emp_report_grouped
+
 ```
 
 ---
