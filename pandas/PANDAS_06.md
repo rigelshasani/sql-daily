@@ -70,7 +70,28 @@ summary_by_year
 ```
 
 ```python
+emp = employees.copy()
+managers = employees.copy()
 
+count = managers.groupby('manager_id').size().reset_index(name='count')
+count = count.set_index('manager_id')['count']
+
+managers['count'] = managers['id'].map(count)
+managers = managers[managers['count'] >= 2]
+managers = managers.merge(employees, left_on='id', right_on='manager_id')
+meansalary = managers.groupby('id_x').agg({'salary_y':'mean'})
+managers['mean_salary_of_reports'] = managers['id_x'].map(meansalary['salary_y'])
+managers['is_high_earner'] = (managers['salary_y'] >= managers['salary_x'] * 0.9).astype(int)
+stats = managers.groupby('id_x').agg({
+    'salary_y':'mean',
+    'is_high_earner':'max'
+})
+managers['mean_salary_of_reports'] = managers['id_x'].map(stats['salary_y'])
+managers['has_high_earner'] = managers['id_x'].map(stats['is_high_earner'])
+managers[['id_x', 'first_name_x', 'last_name_x', 'salary_x',
+       'manager_id_x', 'id_y', 'first_name_y',
+       'last_name_y', 'salary_y', 'manager_id_y',
+       'mean_salary_of_reports', 'is_high_earner', 'has_high_earner']]
 ```
 
 ***Exercise 55***
