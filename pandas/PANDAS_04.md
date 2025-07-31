@@ -273,33 +273,61 @@ de2['ratio'] = de2['salary_x'] / de2['salary_y']
 ```
 
 ```python
+# Select key columns and merge department info into employee data
 emp_report = employees[['first_name', 'last_name', 'dept', 'salary', 'hire_date']]
-emp_report = emp_report.merge(departments, left_on='dept', right_on='dname')
-emp_report = emp_report.drop('dname', axis=1)
-emp_report.columns = ['first_name', 'last_name', 'dept', 'salary', 'hire_date', 'dept_budget']
+emp_report = emp_report.merge(departments, left_on='dept', right_on='dname')  # merge on dept name to bring in budget
+emp_report = emp_report.drop('dname', axis=1)  # drop redundant column after merge
+emp_report.columns = ['first_name', 'last_name', 'dept', 'salary', 'hire_date', 'dept_budget']  # rename for clarity
+# Aggregate salary statistics per department (group-level summary)
 emp_report_grouped = emp_report.groupby('dept').agg(
     avg_salary = ('salary','mean'), 
     median_salary = ('salary','median'), 
     std_salary = ('salary','std'))
+# Extract hire year as separate feature for hiring trend analysis
 emp_report['hire_year'] = pd.to_datetime(emp_report['hire_date']).dt.year
+# Group by (dept, year) and count hires → gives MultiIndex result
 counter = emp_report.groupby(['dept','hire_year']).agg(emp_hired_that_year = ('salary','count'))
+# Pivot the MultiIndex — converts years to columns, one row per dept
 counter = counter.unstack(level='hire_year')
-counter.columns
+# Flatten the resulting column MultiIndex — makes columns like 'hired_2017', 'hired_2021'
 counter.columns = ['hired_' + str(col[1]) for col in counter.columns]
+# Replace NaNs from years with no hires in that department with 0
 counter = counter.fillna(0)
+# Join hiring trend data into summary table; both share 'dept' as index
 emp_report_grouped = emp_report_grouped.join(counter)
+# Compute total salary paid and total dept budget per department
 utilized = emp_report.groupby('dept').agg({'salary':'sum', 'dept_budget':'sum'})
+# Join total salary and budget into hiring trend table for further metrics
 counter = counter.join(utilized, on='dept')
-counter
+# Compute budget utilization % from total salary and total budget
 counter['utilized_percentage'] = (
     (counter['salary'] / counter['dept_budget'] * 100)
     .round(2).astype(str) + '%'
 )
-counter
-
+# Select only needed columns, rename salary to total_salary, and join to master summary
 extra = counter[['salary', 'dept_budget', 'utilized_percentage']].rename(columns={'salary': 'total_salary'})
 emp_report_grouped = emp_report_grouped.join(extra)
+# ↓↓↓ Top earners extraction ↓↓↓
+# Sort employees by department and descending salary — ensures top earners are first
+sorted_emp = emp_report.sort_values(['dept', 'salary'], ascending=[True, False])
+# Keep only the top 2 earners per department
+top2 = sorted_emp.groupby('dept').head(2).copy()  # head(2) applied within each dept group
+# Collapse top 2 earners into one row per dept — builds a summary Series for each group
+top_earners = (
+    top2.drop(columns='dept')
+    .groupby(top2['dept'], group_keys=False)
+    .apply(lambda g: pd.Series({
+        'top1_name': f"{g.iloc[0]['first_name']} {g.iloc[0]['last_name']}",
+        'top1_salary': round(g.iloc[0]['salary']),
+        'top2_name': f"{g.iloc[1]['first_name']} {g.iloc[1]['last_name']}" if len(g) > 1 else None,
+        'top2_salary': round(g.iloc[1]['salary']) if len(g) > 1 else None
+    }))
+)
+# Merge top earner info into department-level summary
+emp_report_grouped = emp_report_grouped.join(top_earners)
+# Final result: emp_report_grouped now contains full department summaries with all metrics
 emp_report_grouped
+
 
 ```
 
