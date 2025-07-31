@@ -14,12 +14,13 @@
 
 ### SQL Proficiency Track
 ```
-SQL Fundamentals        ████████████████████ 100% (140/140)
+SQL Fundamentals        ████████████████████ 100% (150/150)
   ├── SELECT/WHERE      ████████████████████ Complete (40 drills)
   ├── GROUP BY/HAVING   ████████████████████ Complete (40 drills)  
   ├── INNER/LEFT JOINS  ████████████████████ Complete (30 drills)
   ├── Self-JOINs        ████████████████████ Complete (20 drills)
   └── Window Functions  ████████████████████ Complete (10 drills)
+  └── UNION Exercises   ████████████████████ Complete (10 drills)
 
 Advanced SQL            ░░░░░░░░░░░░░░░░░░░░   0% (0/90)
   ├── UNION/Set Ops     ░░░░░░░░░░░░░░░░░░░░   0% (0/20)
@@ -33,8 +34,8 @@ Advanced SQL            ░░░░░░░░░░░░░░░░░░�
 
 ### Python/Pandas Mastery Track
 ```
-Quick-Syntax Drills     ████░░░░░░░░░░░░░░░░  20% (30/150)
-Mid-Depth Tasks         ░░░░░░░░░░░░░░░░░░░░   0% (0/90)
+Quick-Syntax Drills     ████████████░░░░░░░░  33% (50/150)
+Mid-Depth Tasks         ███░░░░░░░░░░░░░░░░░  20% (20/100)
 Performance Deep-Dives  ░░░░░░░░░░░░░░░░░░░░   0% (0/40)
 ```
 **Structure:** 150 × ~12 min, 90 × ~40 min, 40 × ~75 min = 140 hours total
@@ -102,19 +103,19 @@ Failure Post-mortems    ░░░░░░░░░░░░░░░░░░�
 
 ### Current Status
 - **Skill Level:** Foundation Phase Complete (Level 2/10)  
-- **True Competency:** 5% toward hiring-ready capability
-- **Time Investment:** 100/470 hours (21% complete)
-- **Weekly Pace:** 24.5 hours (need 30 hours minimum)
+- **True Competency:** 16% toward hiring-ready capability
+- **Time Investment:** 77.65/470 hours (16.5% complete)
+- **Weekly Pace:** 11.1 hours last week (need 30 hours minimum)
 
 ### Completed Foundation
 - ✅ **SQL Core Competency** - 140 drills across all fundamental patterns
-- ✅ **Pandas Exposure** - 30 exercises (sufficient for next phase)
+- ✅ **Pandas Exposure** - 50 exercises (quick drills complete)
 - ✅ **First Portfolio Project** - Employee performance analysis with insights
 - ✅ **Professional Structure** - Repository organization and documentation
 
 ### Critical Path Forward
 - 🎯 **SQL Advanced** - UNION (15_union.sql), CTEs (16_cte.sql), optimization
-- 🎯 **Pandas Fluency** - 250 more exercises for real competence
+- 🎯 **Pandas Fluency** - 230 more exercises for real competence
 - 🎯 **Visualization** - 25 charts + 2 dashboards with performance requirements
 - 🎯 **Mock Interview Prep** - Schedule sessions NOW, don't defer
 
@@ -143,9 +144,9 @@ Failure Post-mortems    ░░░░░░░░░░░░░░░░░░�
 ## 🔥 Time Management Reality
 
 ### Current Performance
-- **Hours Logged:** 100/470 hours (21% complete)
+- **Hours Logged:** 77.65/470 hours (16.5% complete)
 - **Required Pace:** 30 hours/week consistently  
-- **No-Slip Tolerance:** Missing one week requires 35+ hour recovery
+- **Current Deficit:** 42.35 hours behind schedule
 - **Buffer Usage:** 50 hours for debugging, illness, iteration
 
 ### Success Indicators
@@ -166,10 +167,10 @@ sql-dailies/
 │       ├── 17_query_optimization.sql   # 🔄 Performance & indexing (15 drills)
 │       ├── 18_indexing_plans.sql       # 🔄 EXPLAIN analysis (15 drills)
 │       └── 19_realworld_cases.sql      # 🔄 Multi-DB scenarios (15 drills)
-├── pandas/                       # 30/280 Pandas exercises
-│   ├── drills_quick/            # 🔄 150 files (12 min each)
-│   ├── drills_mid/              # 🔄 90 notebooks (40 min each)
-│   └── deep_dives_perf/         # 🔄 40 case studies (75 min each)
+├── pandas/                       # 86/280 Pandas exercises
+│   ├── drills_quick/            # 🔄 50/150 files complete
+│   ├── drills_mid/              # 🔄 36/90 notebooks complete
+│   └── deep_dives_perf/         # 🔄 0/40 case studies
 ├── analysis/                     # 1/4 Portfolio projects
 │   ├── employee-analysis/        # ✅ Business performance analysis
 │   ├── project-02_customer-seg/  # 🔄 End-to-end segmentation
@@ -191,17 +192,17 @@ sql-dailies/
 
 ---
 
-Immediate 72 h list
+Immediate 72 h list
 
     Book 4 mock‑interview slots.
 
-    Deploy spaced‑rep script and seed with 20 finished SQL drills.
+    Complete exercises 51-60 from Pandas mid-depth set.
 
-    Complete 15_union_operations.sql and record EXPLAIN before/after indexing.
+    Start 16_cte_fundamentals.sql (first 10 CTEs).
 
     Draft Streamlit wire‑frame for Dashboard A (no data yet).
 
-    Log time & energy daily; verify ≥ 6/10 energy on deep‑work days.
+    Target 15h in next 3 days (5h/day) to reach 92.65h total.
 
 ---
 
