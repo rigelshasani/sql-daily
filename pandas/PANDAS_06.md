@@ -103,7 +103,28 @@ managers[['id_x', 'first_name_x', 'last_name_x', 'salary_x',
 ```
 
 ```python
+# Create copies
+temp = employees.copy()
+dep = departments.copy()
+emp_avg = temp['salary'].mean()
+# Create 
+summary_table = temp.groupby('dept').agg(salary_total = ('salary','sum') , salary_avg=('salary','mean'))
+dep = dep.merge(summary_table, left_on='dname', right_on='dept', how='left')
+summary_table = dep
+temp['salary'] = temp['salary'] * 1.1
+temp = temp.groupby('dept').agg(
+    salarytotal_plus10percent=('salary','sum'), 
+)
+summary_table = summary_table.merge(temp, left_on='dname', right_on='dept', how='left')
 
+summary_table['salary_total'] = summary_table['salary_total'].fillna(0)
+summary_table['salary_avg'] = summary_table['salary_avg'].fillna(emp_avg)
+summary_table['salarytotal_plus10percent'] = summary_table['salarytotal_plus10percent'].fillna(0)
+
+summary_table['utilization_%'] = (summary_table['salary_total'] / summary_table['budget']) * 100
+summary_table['projected_util_%'] = (summary_table['salarytotal_plus10percent'] / summary_table['budget']) * 100
+summary_table['numberOfEmployeesAvailableToAdd'] = np.where(((summary_table['budget'] - summary_table['salary_total']) / summary_table['salary_avg']) < 1, 0, np.floor(((summary_table['budget'] - summary_table['salary_total']) / summary_table['salary_avg'])))
+summary_table
 ```
 
 ***Exercise 56***
@@ -116,7 +137,23 @@ managers[['id_x', 'first_name_x', 'last_name_x', 'salary_x',
 ```
 
 ```python
+df = employees.dropna(subset=['salary']).copy()
 
+#Employee-level enrichments first
+df['hire_year'] = pd.to_datetime(df['hire_date']).dt.year
+df['years_employed'] = 2025 - df['hire_year']
+df['starting_salary'] = df['salary'] / 1.03 ** df['years_employed']
+
+#Cohort-level aggregation
+cohort_agg = df.groupby('hire_year').agg(
+    cohort_size = ('first_name', 'count'),
+    current_avg = ('salary', 'mean'),
+    starting_avg = ('starting_salary', 'mean')
+)
+
+#Compute growth rate at the cohort level
+cohort_agg['salary_growth_rate'] = (cohort_agg['current_avg'] / cohort_agg['starting_avg']).round(2)
+cohort_agg
 ```
 
 ***Exercise 57***
@@ -127,7 +164,57 @@ managers[['id_x', 'first_name_x', 'last_name_x', 'salary_x',
 ```
 
 ```python
+skip = employees.copy()
+skip['full_name'] = skip['first_name'] + ' ' + skip['last_name']
+skip = skip[['id', 'full_name', 'manager_id']]
+emptree = skip.copy().fillna(0)
 
+emptree['divider0'] = '|'
+# manager merge and rename
+
+emptree = emptree.merge(skip, left_on='manager_id', right_on='id', suffixes=('_emp', '_mgr'), how='left')
+
+emptree.rename(columns={
+    'id_mgr':'direct_manager_id',
+    'full_name_mgr': 'direct_manager_name',
+    'manager_id_mgr': 'direct_manager_manager_id'
+}, inplace=True)
+
+# Divide
+emptree['divider1'] = '|'
+#skip manager merge and rename
+
+emptree = emptree.merge(skip, left_on='direct_manager_manager_id', right_on='id' ,how='left')
+
+emptree.rename(columns={
+    'id': 'skip_manager_id',
+    'full_name': 'skip_manager_name',
+    'manager_id': 'skip_manager_manager_id'
+}, inplace=True)
+
+
+# Divide
+emptree['divider2'] = '|'
+
+# #dept heads
+emptree  = emptree.merge(skip, left_on='skip_manager_manager_id', right_on='id', how='left')
+
+emptree.rename(columns={
+    'id': 'dept_head_id',
+    'full_name': 'dept_head_name',
+    'manager_id': 'dept_head_manager_id'
+}, inplace=True)
+
+emptree = emptree.merge(skip, left_on='dept_head_manager_id', right_on='id', how='left')
+emptree.rename(columns={
+    'id':'org_head_id',
+    'full_name': 'org_head_name',
+    'manager_id': 'org_head_manager_id'
+}, inplace=True)
+
+emptree['level_in_hierarchy'] = emptree[['direct_manager_id','skip_manager_id','dept_head_id','org_head_id']].notna().sum(axis=1) + 1
+
+emptree
 ```
 
 ***Exercise 58***
