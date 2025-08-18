@@ -224,7 +224,24 @@ emptree
 ```
 
 ```python
-
+# group by dept and aggregate for mean salary and median
+emp1 = employees.copy()
+emp1 = emp1.groupby('dept').agg(mean_sal = ('salary','mean'), median_sal = ('salary','median'))
+# add the dept as a column instead of an index
+emp1 = emp1.reset_index()
+# cross merge to get cartesian product
+emp2 = emp1.copy()
+emp1 = emp1.merge(emp2, how='cross')
+# filter for not the same depts replicated(tech/tech, or tech/sales AND sales/tech)
+emp1 = emp1[(emp1['dept_x'] < emp1['dept_y'])]
+emp1['avg_salary_ratio'] = emp1['mean_sal_x'] / emp1['mean_sal_y']
+emp1['median_salary_ratio'] = emp1['median_sal_x'] / emp1['median_sal_y']
+emp1 = emp1.pivot_table(
+    index='dept_x',
+    columns='dept_y',
+    values=['avg_salary_ratio', 'median_salary_ratio']
+)
+emp1
 ```
 
 ***Exercise 59***
@@ -237,7 +254,18 @@ emptree
 ```
 
 ```python
-
+emp1 = employees.copy()
+emp1 = emp1[emp1['salary'].notna()]
+total_count = emp1['salary'].count()
+emp1 = emp1[emp1['dept'].notna()]
+labels = ["0-70k", "70-85k", "85-100k", "100k+"]
+emp1['bin'] = pd.cut(emp1['salary'], bins=[0,70000,85000,100000,np.inf], labels=labels)
+emp1['yoe'] = 2025 - pd.to_datetime(emp1['hire_date']).dt.year
+emp1 = emp1.groupby('bin').agg({'salary':'count', 
+                                'yoe':'mean', 
+                               'dept': lambda x: ", ".join(set(x)) })
+emp1['percentage'] = round(emp1['salary'] / total_count *100)
+emp1
 ```
 
 ***Exercise 60***
