@@ -111,7 +111,17 @@ GROUP  BY dept, EXTRACT(YEAR FROM hire_date)
 ORDER  BY dept, hire_year;
 ```
 ```python
-# your code
+emp = employees.copy()
+emp['hire_year'] = pd.to_datetime(emp['hire_date']).dt.year
+emp = emp[['dept', 'hire_year']]
+emp2 = emp.groupby(['dept', 'hire_year']).agg(count=('dept','count'))
+emp2 = emp2.reset_index()
+pvt = emp2.pivot_table(
+    index='dept',
+    columns='hire_year',
+    values='count'
+)
+pvt.fillna(0)
 ```
 
 # Exercise 46
@@ -135,7 +145,12 @@ FROM   cume
 ORDER  BY dept, dept_cumsum;
 ```
 ```python
-# your code
+emp = employees.copy()
+emp = emp[emp['salary'].notna()]
+emp = emp.sort_values(['dept', 'hire_date'])
+emp['dept_cumsum'] = emp.groupby('dept')['salary'].cumsum()
+emp['over250k'] = (emp['dept_cumsum'] > 250000) & (emp.groupby('dept')['dept_cumsum'].shift(1) <= 250000)
+emp
 ```
 
 # Exercise 47
@@ -176,7 +191,14 @@ GROUP  BY dept
 ORDER  BY top3_total DESC;
 ```
 ```python
-# your code
+emp = employees.copy()
+emp = emp[emp['salary'].notna()]
+emp = emp.sort_values(['dept', 'salary'], ascending=[True, False])
+emp = emp.groupby('dept').head(3)
+
+emp = emp.groupby('dept').agg({'salary':'sum', 'first_name': lambda x: ", ".join(x)})
+emp = emp.rename(columns={'first_name': 'top3_names', 'salary':'top3_salary'})
+emp
 ```
 
 # Exercise 49
