@@ -272,13 +272,52 @@ emp1
 ```sql
 -- Simulate performance ratings based on:
 -- 1. Salary relative to dept average (40% weight)
--- 2. Tenure/experience (30% weight)  
+-- 2. Tenure/experience (30% weight)
 -- 3. Position in hierarchy (30% weight)
--- Create rating 1-5 and recommend salary adjustment %
+-- Create rating 1–5
+-- Recommend salary adjustment % by rating band 
+--   (e.g., 5 → 7–10%, 4 → 3–6%, 3 → 0–3%, 2–1 → 0%)
+-- Ensure total adjustments fit within overall payroll budget
+-- Optional: enforce per-department raise budget
 ```
 
 ```python
+emp = employees.copy()
+emp = emp[emp['salary'].notna()]
+emp = emp[emp['dept'].notna()]
 
+emp2 = emp.copy()
+emp2 = emp2.groupby('dept')['salary'].agg(min_salary='min',max_salary='max')
+emp = emp.merge(emp2, on='dept')
+
+emp['yoe'] = 2025 - pd.to_datetime(emp['hire_date']).dt.year
+
+emp3 = emp.copy()
+emp3 = emp3.groupby('dept')['yoe'].agg(min_yoe='min', max_yoe='max')
+emp = emp.merge(emp3, on='dept')
+
+emptree = emptree[['id_emp', 'level_in_hierarchy']]
+emp = emp.merge(emptree, left_on='id', right_on='id_emp')
+    
+emp4 = emp.copy()
+emp4 = emp4.groupby('dept')['level_in_hierarchy'].agg(min_lvl='min', max_lvl='max')
+emp = emp.merge(emp4, on='dept')
+
+emp['normalized_salary'] = (emp['salary'] - emp['min_salary']) / (emp['max_salary'] - emp['min_salary'])
+emp.loc[emp['max_salary'] == emp['min_salary'], 'normalized_salary'] = 0.5  # flat dept = midpoint
+emp['normalized_yoe'] = (emp['yoe'] - emp['min_yoe']) / (emp['max_yoe'] - emp['min_yoe'])
+emp.loc[emp['max_yoe'] == emp['min_yoe'], 'normalized_yoe'] = 0.5
+emp['normalized_position'] = 1 - ((emp['level_in_hierarchy'] - emp['min_lvl']) / (emp['max_lvl'] - emp['min_lvl']))
+emp.loc[emp['max_lvl'] == emp['min_lvl'], 'normalized_position'] = 0.5
+emp['performance'] = 0.4 * emp['normalized_salary'] + 0.3 * emp['normalized_yoe'] + 0.3 * emp['normalized_position']
+
+final_table = emp[['normalized_salary', 'normalized_yoe', 'normalized_position', 'performance']].copy()
+final_table['rating'] = pd.cut(
+    final_table['performance'],
+    bins=[-float("inf"), 0.2, 0.4, 0.6, 0.8, float("inf")],
+    labels=[1, 2, 3, 4, 5]
+)
+final_table
 ```
 
 
