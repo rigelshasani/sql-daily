@@ -257,8 +257,18 @@ WHERE  rn = 1
   AND  report_salary > manager_salary
 ORDER BY salary_gap DESC;
 ```
+
 ```python
-manager_salary = employees.set_index('id')['salary']
-employees['manager_salary'] = employees['manager_id'].map(manager_salary)
-# Then you can filter where employee's salary > manager_salary
+emp = employees.copy()
+emp = emp[emp['salary'].notna()]
+managers = emp.copy()
+managers = managers.merge(emp, how='left', left_on='id', right_on='manager_id', suffixes=['_mgr', '_emp'])
+managers = managers.sort_values(['id_mgr', 'salary_emp'], ascending=[True, False])
+managers = managers.groupby('id_mgr').head(1)
+managers = managers[managers['first_name_emp'].notna()]
+managers = managers[managers['salary_emp'] > managers['salary_mgr']]
+managers = managers[['first_name_mgr', 'last_name_mgr', 'salary_mgr', 'first_name_emp',
+       'last_name_emp', 'salary_emp']]
+managers['salary_gap'] = managers['salary_emp'] - managers['salary_mgr']
+managers
 ```
