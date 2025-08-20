@@ -1,0 +1,161 @@
+# Pandas Exercises 71-80: Advanced Consolidation
+
+## Exercise 71: Salary Compression Analysis
+```sql
+-- For each department, calculate the "salary compression ratio"
+-- (difference between max and min salary) / average salary
+-- Also show how many employees are within 10% of the dept average
+-- Order by compression ratio (lowest = most compressed salaries)
+```
+
+```python
+# Your solution here
+```
+
+---
+
+## Exercise 72: Consecutive Hire Analysis  
+```sql
+-- Find all cases where a department hired 2+ people within 90 days
+-- Show: dept, first_hire_date, second_hire_date, days_between
+-- Include the names of both employees hired
+```
+
+```python
+# Your solution here
+```
+
+---
+
+## Exercise 73: Manager Span & Depth
+```sql
+-- For each manager, calculate:
+-- 1. Direct reports count
+-- 2. Total reports (including indirect - reports of reports)
+-- 3. Levels of hierarchy below them
+-- 4. Total salary responsibility (sum of all reports' salaries)
+```
+
+```python
+# Your solution here
+```
+
+---
+
+## Exercise 74: Budget Reallocation Simulation
+```sql
+-- If we moved the highest paid person from each "over-budget" dept
+-- (where salaries > 60% of budget) to the dept with most budget room:
+-- 1. Which employees would move?
+-- 2. What would the new utilization % be for each dept?
+```
+
+```python
+# Your solution here
+```
+
+---
+
+## Exercise 75: Tenure-Based Salary Fairness
+```sql
+-- Group employees by tenure brackets (0-2, 2-4, 4-6, 6+ years)
+-- For each bracket + dept combination:
+-- Show avg salary and flag if it's lower than junior brackets
+-- (indicating possible pay inversion)
+```
+
+```python
+# Your solution here
+```
+
+---
+
+## Exercise 76: Cross-Department Collaboration Potential
+```sql
+-- Find pairs of employees from different departments where:
+-- 1. They have the same manager (indicating cross-dept management)
+-- 2. Their salaries are within 15% of each other
+-- Show the potential collaboration pairs with their depts and salaries
+```
+
+```python
+# Your solution here
+```
+
+---
+
+## Exercise 77: Promotion Readiness Score
+```sql
+-- Calculate a "promotion readiness score" for each employee:
+-- - 40% weight: Years of experience (normalized 0-1 within dept)
+-- - 30% weight: Salary below dept average (indicates room for growth)
+-- - 30% weight: Not a manager yet (has no direct reports)
+-- Show top 2 candidates per department
+```
+
+```python
+# Your solution here
+```
+
+---
+
+## Exercise 78: Department Health Metrics Dashboard
+```sql
+-- Create a comprehensive health check per department:
+-- 1. Turnover risk: % of employees hired in last 2 years
+-- 2. Salary spread: coefficient of variation (std/mean)
+-- 3. Manager ratio: managers / total employees
+-- 4. Budget stress: utilization > 80% flag
+-- Combine into a single "health score" (0-100)
+```
+
+```python
+# Your solution here
+```
+
+---
+
+## Exercise 79: Organizational Distance Matrix
+```sql
+-- For each pair of employees, calculate their "organizational distance":
+-- - Same manager = distance 1
+-- - Same skip-level manager = distance 2  
+-- - Same department = distance 3
+-- - Different department = distance 4
+-- Create a matrix showing avg distance between departments
+```
+
+```python
+# Your solution here
+```
+
+---
+
+## Exercise 80: Compensation Bands Auto-Generation
+```sql
+-- Automatically create salary bands for each department:
+-- 1. Use percentiles (0-25th, 25-50th, 50-75th, 75-100th)
+-- 2. Label bands as: Entry, Mid, Senior, Principal
+-- 3. For each band show: count, avg_salary, avg_tenure
+-- 4. Identify employees who seem misplaced (high tenure in low band)
+-- 5. Suggest band adjustments for misplaced employees
+```
+
+```python
+# Your solution here
+```
+
+---
+
+## Bonus Challenge: Combine Multiple Exercises
+```sql
+-- Using techniques from exercises 71-80, create a single executive summary:
+-- 1. Which department has the healthiest compensation structure?
+-- 2. Which employees are flight risks (underpaid for tenure)?
+-- 3. Where are the biggest opportunities for reorg/optimization?
+-- Present as a clean, business-ready summary table
+```
+
+```python
+# Your solution here
+```
