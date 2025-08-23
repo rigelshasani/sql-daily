@@ -9,7 +9,17 @@
 ```
 
 ```python
-# Your solution here
+emp = employees.copy()
+emp = emp[emp['salary'].notna()]
+
+summary = emp.groupby('dept')['salary'].agg(max='max', min='min', avg='mean')
+emp = emp.merge(summary, on='dept')
+
+emp['within10'] = np.where((emp['salary']>=0.9*emp['avg']) & (emp['salary']<=1.1*emp['avg']), 1, 0)
+summary['within10']= emp.groupby('dept')['within10'].agg('sum')
+summary['compression_ratio'] = (summary['max'] - summary['min']) / summary['avg']
+summary['compression_ratio'] = np.where(summary['avg']==0, np.nan, summary['compression_ratio'])
+summary
 ```
 
 ---
@@ -22,7 +32,26 @@
 ```
 
 ```python
-# Your solution here
+# copy, delete empty departments, sort by both dept and hire-date
+emp = employees.copy()
+emp = emp[emp['dept'].notna()]
+emp['hire_date'] = pd.to_datetime(emp['hire_date']) 
+emp = emp.sort_values(['dept', 'hire_date'])
+# save hire date shifted and id of the shifted column to the current column for comparison
+emp[['hire_date_shifted', 'id_shifted', 'first_name_shifted', 'last_name_shifted']] = (emp.groupby('dept')[['hire_date', 'id', 'first_name', 'last_name']].shift(1))
+
+# calculate hiring date difference between current and earlier row(already sorted by hire_Date)
+emp['hire_date_diff'] = (emp['hire_date'] - emp['hire_date_shifted']).dt.days
+
+# filter for less than 90 days
+emp = emp[emp['hire_date_diff'] <= 90]
+
+emp = emp.rename(columns={'hire_date':'second_hire_date','hire_date_shifted':'first_hire_date','hire_date_diff':'days_between','first_name':'second_hire_first_name', 'last_name':'second_hire_last_name', 'first_name_shifted':'first_hire_first_name', 'last_name_shifted':'first_hire_last_name'})
+emp['first_employee'] = emp['first_hire_first_name'] + ' ' + emp['first_hire_last_name']
+emp['second_employee'] = emp['second_hire_first_name'] + ' ' + emp['second_hire_last_name']
+emp = emp[['first_employee', 'dept','first_hire_date', 'second_hire_date', 'second_employee', 'days_between']]
+emp = emp.sort_values(['dept', 'first_hire_date'])
+emp
 ```
 
 ---
