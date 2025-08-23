@@ -60,9 +60,10 @@ emp
 ```sql
 -- For each manager, calculate:
 -- 1. Direct reports count
--- 2. Total reports (including indirect - reports of reports)
--- 3. Levels of hierarchy below them
--- 4. Total salary responsibility (sum of all reports' salaries)
+-- 2. Skip-level reports count (reports of their direct reports)
+-- 3. Total reports (direct + skip-level only, max 2 levels)
+-- 4. Total salary responsibility (sum of direct and skip-level reports' salaries)
+-- Only show managers with at least 1 direct report
 ```
 
 ```python
@@ -131,11 +132,12 @@ emp
 ## Exercise 78: Department Health Metrics Dashboard
 ```sql
 -- Create a comprehensive health check per department:
--- 1. Turnover risk: % of employees hired in last 2 years
--- 2. Salary spread: coefficient of variation (std/mean)
--- 3. Manager ratio: managers / total employees
--- 4. Budget stress: utilization > 80% flag
--- Combine into a single "health score" (0-100)
+-- 1. Turnover risk: % of employees hired in last 2 years (0-100 scale)
+-- 2. Salary spread: coefficient of variation (std/mean) (0-100 scale, lower is better)
+-- 3. Manager ratio: managers / total employees (0-100 scale)
+-- 4. Budget stress: (salary_total / budget) * 100
+-- Health score = average of all 4 metrics (equal 25% weight each)
+-- Show all metrics plus final health score
 ```
 
 ```python
@@ -144,14 +146,15 @@ emp
 
 ---
 
-## Exercise 79: Organizational Distance Matrix
+## Exercise 79: Department Distance Summary
 ```sql
--- For each pair of employees, calculate their "organizational distance":
+-- Calculate average "organizational distance" between departments:
+-- For each pair of employees, distance is:
 -- - Same manager = distance 1
--- - Same skip-level manager = distance 2  
--- - Same department = distance 3
--- - Different department = distance 4
--- Create a matrix showing avg distance between departments
+-- - Same department (different manager) = distance 2
+-- - Different department = distance 3
+-- Create a pivot table showing avg distance between each dept pair
+-- (Should result in a 4x4 matrix for Tech, Sales, Marketing, HR)
 ```
 
 ```python
@@ -163,11 +166,11 @@ emp
 ## Exercise 80: Compensation Bands Auto-Generation
 ```sql
 -- Automatically create salary bands for each department:
--- 1. Use percentiles (0-25th, 25-50th, 50-75th, 75-100th)
+-- 1. Use quartiles (0-25th, 25-50th, 50-75th, 75-100th percentile)
 -- 2. Label bands as: Entry, Mid, Senior, Principal
--- 3. For each band show: count, avg_salary, avg_tenure
--- 4. Identify employees who seem misplaced (high tenure in low band)
--- 5. Suggest band adjustments for misplaced employees
+-- 3. For each band show: count, avg_salary, min_salary, max_salary
+-- 4. Flag employees with 5+ years tenure still in Entry band as "review needed"
+-- 5. Show these flagged employees with their name, tenure, salary, and dept
 ```
 
 ```python
