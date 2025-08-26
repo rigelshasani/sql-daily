@@ -1,7 +1,7 @@
 # Moving Memory - SQL/Pandas Learning
 
 **Last Updated:** Aug 26, 2025
-**Session #:** 73 (CTEs, window functions, and Pandas memory profiling)
+**Session #:** 74 (Data cleaning introduction & churn analysis concepts)
 
 > **Usage Note:** This is a rolling document - update it each session. The reflection prompts get overwritten each time. Archive important insights in the "Notes & Insights" section for permanent reference.
 
@@ -31,7 +31,7 @@
   * *Impact:* Now think carefully about aggregation level before starting calculations.
 
 * **Aug 2025:**
-  * *Concept:* CTEs as “temporary named subqueries.”  
+  * *Concept:* CTEs as "temporary named subqueries."  
     *What made it click:* Seeing that a CTE is just a prep step (like defining a variable) and then used once in the next query.  
     *Impact:* Much less fear of CTE syntax, now confident in layering queries step-by-step.
 
@@ -44,6 +44,11 @@
   * *Concept:* Memory profiling and dtype optimization.  
     *What made it click:* Seeing `hire_date` drop from ~2680B to 320B after conversion to datetime64 and `dept` shrink massively as category.  
     *Impact:* Confident in profiling and converting object-heavy columns to efficient types.
+
+* **Aug 2025:**
+  * *Concept:* Professional data skepticism and quality assessment.
+    *What made it click:* Seeing impossible values (negative ages, 999-year-olds) and questioning entire dataset reliability.
+    *Impact:* Now always assess data quality scope before diving into analysis. Ask "what percentage is problematic?"
 
 ---
 
@@ -72,6 +77,7 @@
 * Need to state population before filtering, otherwise denominators drift.
 * Breakthroughs come only after repeating the same pattern in 2–3 contexts.
 * Kinesthetic learner - need to fail and fix rather than receive solutions.
+* **New:** Need concept introduction before domain-specific exercises. Updated teaching prompt to require concept introduction protocol.
 
 ### Progress Milestones
 *Major achievements and skill level ups*
@@ -83,20 +89,35 @@
 * **Aug 2025:** Started advanced consolidation exercises 71-80.
 * **Aug 2025:** SQL CTE drills 151–155 complete (CTEs, window functions).  
 * **Aug 2025:** Profiling drill complete (memory savings ~43% after dtype conversions).  
+* **Aug 2025:** **Data cleaning introduction:** Generated messy churn dataset, assessed data quality scope (2.44% invalid ages, 4.7% missing).
+
+----------------------------------------------------------
 
 ## ROLLING MEMORY (Updates Each Session)
 
 ### Current Focus Areas
 *What am I actively working on right now?*
 
-* [x] **Primary Topic:** Advanced pandas consolidation exercises
-* [x] **Secondary Topic:** Department-level analytics and consecutive event detection
-* [x] **Exercise Range:** 71-80 (completed 71-72, working on 73)
+* [ ] **Primary Topic:** Data cleaning workflows and churn analysis
+* [ ] **Secondary Topic:** Missing vs invalid data handling strategies
+* [ ] **Exercise Range:** Catch-up work (Monday's pandas cleaning + Tuesday's A/B test scaffold)
 
 ### Active Struggle Patterns
 *What keeps tripping me up right now?*
 
-#### Conceptual Struggles
+#### New Learning Areas (Not Yet Struggles)
+
+* [ ] **Concept:** Churn analysis business logic
+
+  * *Status:* Just introduced - understanding what churn is and column categorization
+  * *Next:* Need to practice identifying target variables and predictor importance
+
+* [ ] **Concept:** Data cleaning decision frameworks
+
+  * *Status:* Learning to distinguish missing vs invalid data problems
+  * *Next:* Need to practice systematic cleaning approaches
+
+#### Previous Struggles (Still Active)
 
 * [ ] **Pattern:** Recursive hierarchy traversal in pandas
 
@@ -104,62 +125,56 @@
   * *Frequency:* Medium
   * *Last encountered:* Aug 26, 2025
 
-#### Syntax/Technical Struggles
-
-* [ ] **Issue:** Choosing correct aggregation level before calculations
-  * *Context:* Initially tried compression ratio at employee level
-  * *Status:* Improving but needs vigilance
-
 ### Recent Progress
 
 *What's been improving lately?*
 
-* **Pattern:** Using shift() within groups
+* **Pattern:** Professional data quality assessment
 
-  * *Progress:* Successfully used for consecutive hire detection.
-  * *Confidence:* Strong
+  * *Progress:* Successfully questioned dataset reliability when seeing impossible values.
+  * *Confidence:* Growing - now naturally calculate percentage of problematic data
 
-* **Pattern:** Recognizing when to calculate at dept vs employee level
+* **Pattern:** Systematic data exploration
 
-  * *Progress:* Fixed compression ratio calculation after initial confusion.
-  * *Confidence:* Growing
+  * *Progress:* Methodically assessed missing vs invalid data using pandas methods.
+  * *Confidence:* Medium
 
 ### Reinforcement Needed
 *What do I understand but need more practice with?*
 
-* [ ] **Pattern:** Multi-level hierarchical queries (manager of managers)
+* [ ] **Pattern:** Data cleaning strategy decisions
 
-  * *Understanding:* Conceptual understanding good
-  * *Practice needed:* Heavy - need iterative approach
+  * *Understanding:* Conceptual understanding of remove vs fix vs flag approaches
+  * *Practice needed:* Heavy - need to practice systematic cleaning workflows
 
-* [ ] **Pattern:** Creating and interpreting distance/similarity matrices
+* [ ] **Pattern:** Business domain knowledge integration
 
-  * *Understanding:* Medium
-  * *Practice needed:* Medium
+  * *Understanding:* Basic concept of churn analysis introduced
+  * *Practice needed:* Medium - need more practice applying business logic to technical decisions
 
 ### Next Session Goals
 *What do I want to focus on next time?*
 
-1. **Primary goal:** Complete exercises 73-75 (manager span, budget simulation, tenure fairness).
-2. **Secondary goal:** Practice recursive/iterative hierarchy traversal.
-3. **Skill to reinforce:** Choosing correct aggregation level from the start.
+1. **Primary goal:** Complete systematic data cleaning workflow (handle invalid ages, missing values, duplicates).
+2. **Secondary goal:** Complete A/B test project scaffold (hypothesis, metrics, synthetic data).
+3. **Skill to reinforce:** Decision-making frameworks for data quality issues.
 
 ## SESSION REFLECTION (Overwrites Each Session)
 
 **What frustrated me today?**
-Initially calculating compression ratio at employee level when it should be department level. Realizing I needed to think about aggregation level before diving into code.
+Initially being asked to categorize columns without understanding churn analysis concepts. Led to updating the teaching prompt to require proper concept introduction.
 
 **What felt easy/natural?**
-Using shift() to compare consecutive rows within groups. Detecting patterns that need group-wise operations vs global operations.
+Questioning data reliability when seeing impossible values. The professional skepticism came naturally and led to good systematic analysis.
 
 **What pattern am I starting to see?**
-Always ask "what level should this metric exist at?" before starting calculations. Department metrics shouldn't vary by employee.
+Always assess the scope of data quality problems (percentage affected) before deciding on cleaning strategy. Need to understand business context before making technical decisions.
 
 **What should I drill more?**
-Hierarchical data structures and recursive-style operations in pandas. Clean approaches to multi-level reporting relationships.
+Systematic data cleaning workflows. Need more practice with the full end-to-end process of identifying → assessing → deciding → implementing data quality fixes.
 
-**Energy level: High**
-**Confidence level: Medium-Strong**
+**Energy level: Medium-High**
+**Confidence level: Medium**
 
 ---
 
