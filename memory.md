@@ -1,7 +1,7 @@
 # Moving Memory - SQL/Pandas Learning
 
 **Last Updated:** Aug 26, 2025
-**Session #:** 71-72 (Pandas compression analysis & consecutive hires)
+**Session #:** 73 (CTEs, window functions, and Pandas memory profiling)
 
 > **Usage Note:** This is a rolling document - update it each session. The reflection prompts get overwritten each time. Archive important insights in the "Notes & Insights" section for permanent reference.
 
@@ -29,6 +29,23 @@
   * *Concept:* Department-level vs employee-level calculations.
   * *What made it click:* Realizing compression ratio is a department metric, not per-employee.
   * *Impact:* Now think carefully about aggregation level before starting calculations.
+
+* **Aug 2025:**
+  * *Concept:* CTEs as “temporary named subqueries.”  
+    *What made it click:* Seeing that a CTE is just a prep step (like defining a variable) and then used once in the next query.  
+    *Impact:* Much less fear of CTE syntax, now confident in layering queries step-by-step.
+
+* **Aug 2025:**
+  * *Concept:* Window functions vs GROUP BY.  
+    *What made it click:* Realizing GROUP BY collapses rows, while window functions *annotate* them.  
+    *Impact:* Now check: “Do I need to collapse or keep detail?” before choosing approach.
+
+* **Aug 2025:**
+  * *Concept:* Memory profiling and dtype optimization.  
+    *What made it click:* Seeing `hire_date` drop from ~2680B to 320B after conversion to datetime64 and `dept` shrink massively as category.  
+    *Impact:* Confident in profiling and converting object-heavy columns to efficient types.
+
+---
 
 ### Conquered Struggles
 *Patterns I used to struggle with but have now mastered*
@@ -64,6 +81,8 @@
 * **Aug 2025:** Exercises P051–P060 (performance simulation with normalized scoring) complete.
 * **Aug 2025:** Exercises 1-60 complete (skipped 47, 49 from 45-50 set).
 * **Aug 2025:** Started advanced consolidation exercises 71-80.
+* **Aug 2025:** SQL CTE drills 151–155 complete (CTEs, window functions).  
+* **Aug 2025:** Profiling drill complete (memory savings ~43% after dtype conversions).  
 
 ## ROLLING MEMORY (Updates Each Session)
 
