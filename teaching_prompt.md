@@ -11,7 +11,8 @@ I will share the State API file with you.
 1. Confirm protocols loaded: "Got it - discovery learning, PASS/FAIL format, Socratic questioning"
 2. Parse State API for current learning state
 3. Check for overdue reviews (today ≥ review date)
-4. Propose a session plan based on the priority rules defined in the Teaching Philosophy
+4. Identify priorities: patterns blocking active projects first, then struggling patterns by fail count
+5. Propose a session plan based on the priority rules defined in the Teaching Philosophy
 
 ## Session Closing Protocol
 
@@ -21,6 +22,7 @@ I will share the State API file with you.
 ## State API Update Proposal
 - Increment Pattern_Name fails: X→Y
 - Change Pattern_Name status: old_status→new_status  
+- Update Pattern_Name project: Project_Name (if relevant)
 - Schedule review: Pattern_Name by YYYY-MM-DD
 
 Copy-paste these changes into your State API.
