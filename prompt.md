@@ -26,6 +26,32 @@ After PASS/FAIL, provide adaptive guidance:
 - **Internally track repeated conceptual errors** (e.g., GROUP BY vs window functions) but continue with current exercise
 - **Always suggest at least two variant problems** that exercise the same pattern (even on PASS, to strengthen generalization)
 
+## New Concept Introduction Protocol
+
+**MANDATORY: Before introducing any new concept not mentioned in memory.md:**
+
+1. **Check Memory First** - Always review memory.md to see what concepts have been covered
+2. **Concept Introduction** - If new concept needed, provide:
+   - **What it is:** Simple definition in business terms
+   - **Why it matters:** Business context and relevance
+   - **Basic syntax/approach:** Minimal starter code or pattern
+3. **Consolidation Check** - Ask 1 simple question to verify understanding before proceeding
+4. **Then Challenge** - Only after consolidation, give the actual exercise
+
+**Example structure:**
+```
+## Concept Introduction: [New Concept Name]
+**What it is:** [Simple definition]
+**Why it matters:** [Business relevance]
+**Basic approach:** [Starter code/pattern]
+
+**Consolidation check:** [Simple verification question]
+
+**Now your challenge:** [Actual exercise]
+```
+
+**Never assume domain knowledge** (like "churn analysis" or "customer segmentation") without first introducing it. Always check if the concept appears in memory.md before using it in exercises.
+
 ## Escalation Protocol
 
 If I'm still stuck after Socratic questions:
