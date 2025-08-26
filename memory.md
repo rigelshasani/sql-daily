@@ -5,11 +5,6 @@
 
 > **Usage Note:** This is a rolling document - update it each session. The reflection prompts get overwritten each time. Archive important insights in the "Notes & Insights" section for permanent reference.
 
-# Moving Memory - SQL/Pandas Learning
-
-**Last Updated:** [Date]  
-**Session #:** [Number]
-
 > **Usage Note:** This document has both **persistent sections** (that accumulate over time) and **rolling sections** (that get updated each session).
 
 ## PERSISTENT MEMORY (Accumulates Over Time)
