@@ -18,8 +18,6 @@
 | Churn_Analysis_Concepts | Churn_Analysis | 0 | learning | - |
 | AB_Test_Design | AB_Test_Project | 1 | learning | - |
 | Business_Metrics | AB_Test_Project | 0 | learning | - |
-| GROUPBY_vs_WINDOW | Q2_Revenue_Analysis | 4 | struggling | 2025-08-27 |
-| Data_Exploration_Workflows| Customer_Segmentation | 1 | struggling | 2025-09-01 |
 
 ## Recent Completions
 - **Aug 2025:** SQL drills 151-155 (CTEs, window functions)  
