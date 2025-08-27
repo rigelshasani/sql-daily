@@ -1,110 +1,157 @@
-# Data Analytics Mastery Program — Daily Schedule (Weeks 10–14)
+# Data Analytics Mastery Program — Daily Schedule (Weeks 10–14, Revised)
 
 ## Format
 - **3–4h/day target**, Sundays heavier (4h), weekdays steady (3h).
-- Each day = focused single-skill blocks, not split by hour. Work in one session.
+- Each block = realistic milestone, sometimes spanning 2 days for complex tasks.
+- All outputs committed to repo same day.
+- Focus on depth and quality over speed.
 
 ---
 
-## Week 10 (Aug 22–28) — Restart & Unblock
+## Week 10 (Aug 22–28) — SQL Window Functions + Foundations
 
-**Sat (Aug 23)** — ✅ 3.29h logged (Pandas deep-dives).
-**Sun (Aug 24)** — ✅ SQL CTE drills (2h), Pandas memory profiling doc (2h)
-**Mon (Aug 25)** — Pandas customer churn dataset cleaning: handle nulls, duplicates, outliers (3h)
-**Tue (Aug 26)** — A/B test project scaffold: create hypothesis, define metrics, generate sample data (3h)
-**Wed (Aug 27)** — Business case study: "Q2 revenue drop analysis" - full RCA with visualizations (4h)
-**Thu (Aug 28)** — SQL window functions: customer ranking queries, running totals, period-over-period (3h)
-**Total Week 10:** ~22h
+Sat (Aug 23) — ✅ Pandas deep-dive: memory profiling on churn dataset  
+Deliverable: pandas/perf/memory_profiling.md
 
----
+Sun (Aug 24) — ✅ SQL drills 151–155 (CTEs), Pandas memory profiling doc  
+Deliverables: sql/16_CTE.sql, 
 
-## Week 11 (Aug 29–Sep 4) — Integration Start
+Mon (Aug 25) — Pandas churn cleaning: nulls, duplicates, outliers  
+Deliverable: pandas/cleaning/churn_cleaned.ipynb
 
-**Fri (Aug 29)** — SQL advanced window functions: LAG/LEAD for funnel analysis, cohort definitions (3h)
-**Sat (Aug 30)** — **Optimizer Slot #1**: Pandas vectorization benchmarking - loops vs vectorized operations with timing (4h)
-**Sun (Aug 31)** — Statistics deep-dive: correlation analysis with marketing spend dataset, significance testing (4h)
-**Mon (Sep 1)** — Metric framework workshop: define North Star metrics for e-commerce business case (3h)
-**Tue (Sep 2)** — Dashboard prototype: create interactive Plotly dashboard with 3 core charts (3h)
-**Wed (Sep 3)** — Pandas customer segmentation: RFM analysis with clustering implementation (4h)
-**Thu (Sep 4)** — A/B test analysis: complete statistical testing, write business recommendations (4h)
+Tue (Aug 26) — A/B test scaffold: hypothesis + metric framework (phase 1)  
+Deliverable: statistics/ab_test/scaffold.ipynb
 
-**Total Week 11:** ~25h
+Wed (Aug 27) — A/B test dataset generation (phase 2)  
+Deliverable: statistics/ab_test/dataset_generation.ipynb
+
+Thu (Aug 28) — SQL drills 211–220 (ROW_NUMBER, RANK, DENSE_RANK, running totals)  
+Deliverable: sql/211-220_window_drills.sql
+
+**Week 10 Outputs:** 20 SQL drills, 2 perf docs, cleaned dataset, A/B scaffold + dataset.
 
 ---
 
-## Week 12 (Sep 5–11) — Integration Push
+## Week 11 (Aug 29–Sep 4) — A/B Test + Dashboard Start
 
-**Fri (Sep 5)** — SQL business logic: MRR calculations, customer journey multi-table joins (3h)
-**Sat (Sep 6)** — Pandas cohort analysis: monthly retention rates with survival curves (4h)
-**Sun (Sep 7)** — Dashboard refinement: add filters, improve UX, create executive summary view (4h)
-**Mon (Sep 8)** — A/B test project finalization: create presentation deck with business recommendations (3h)
-**Tue (Sep 9)** — Marketing attribution analysis: last-touch vs first-touch vs multi-touch models (3h)
-**Wed (Sep 10)** — **Optimizer Slot #2**: SQL EXPLAIN analysis - identify slow queries, create indexes, benchmark improvements (4h)
-**Thu (Sep 11)** — Portfolio Project #2 setup: customer segmentation business requirements, data exploration (4h)
+Fri (Aug 29) — SQL drills 221–230 (LAG, LEAD, funnel analysis)  
+Deliverable: sql/221-230_window_drills.sql
 
-**Total Week 12:** ~25h
+Sat (Aug 30) — A/B test statistical analysis (t-test, chi-square)  
+Deliverable: statistics/ab_test/analysis.ipynb
 
----
+Sun (Aug 31) — A/B test interpretation + business recommendations  
+Deliverable: statistics/ab_test/recommendations.md
 
-## Week 13 (Sep 12–18) — Power BI/Tableau + Portfolio
+Mon (Sep 1) — Metric framework workshop (North Star metrics)  
+Deliverable: analysis/metric_framework.md
 
-**Fri (Sep 12)** — Power BI tutorial: connect to data, create basic charts, dashboard layouts (3h)
-**Sat (Sep 13)** — Statistics advanced: confidence intervals, sample size calculations with business scenarios (4h)
-**Sun (Sep 14)** — Power BI dashboard clone: recreate Python dashboard in Power BI with same functionality (4h)
-**Mon (Sep 15)** — Portfolio Project #2: implement clustering algorithm, validate segments with business logic (3h)
-**Tue (Sep 16)** — SQL advanced cases: revenue attribution queries, customer churn prediction data prep (3h)
-**Wed (Sep 17)** — Regression project setup: price elasticity analysis - data collection, feature engineering (4h)
-**Thu (Sep 18)** — Failure documentation: temporal leakage case study - identify, analyze, create prevention checklist (4h)
+Tue (Sep 2) — Dashboard prototype: Plotly w/3 charts (phase 1)  
+Deliverable: visualizations/prototype_dashboard_v1.ipynb
 
-**Total Week 13:** ~25h
+Wed (Sep 3) — Dashboard prototype: add interactivity + summary (phase 2)  
+Deliverable: visualizations/prototype_dashboard_v2.ipynb
 
----
+Thu (Sep 4) — Pandas Optimizer Case #1: vectorization benchmarks  
+Deliverable: pandas/perf/vectorization.md
 
-## Week 14 (Sep 19–25) — Consolidation
-
-**Fri (Sep 19)** — Regression modeling: build linear regression, check assumptions, validate model (3h)
-**Sat (Sep 20)** — **Optimizer Slot #3**: Pandas advanced merging - benchmark join strategies, memory optimization (4h)
-**Sun (Sep 21)** — Dashboard polish: optimize load times, add executive summary, user testing simulation (4h)
-**Mon (Sep 22)** — Portfolio Project #3 start: marketing mix modeling - define business problem, gather data (3h)
-**Tue (Sep 23)** — Business metrics deep-dive: calculate unit economics (CAC, LTV), cohort retention analysis (3h)
-**Wed (Sep 24)** — Regression analysis presentation: create business-focused slide deck with recommendations (4h)
-**Thu (Sep 25)** — Portfolio Project #2 final wrap: write README, create presentation, optimize code (4h)
-
-**Total Week 14:** ~25h
+**Week 11 Outputs:** 10 SQL drills, A/B analysis + recommendations, metric framework doc, initial dashboard prototype, optimizer doc #1.
 
 ---
 
-# 🔑 Milestones by Week 14
+## Week 12 (Sep 5–11) — Segmentation + Performance
 
-- **Week 10:** A/B test scaffolded, business case study complete, window functions working.
-- **Week 11:** Dashboard prototype live, A/B test analysis complete, first optimizer doc.
-- **Week 12:** Cohort analysis functional, attribution model built, second optimizer doc.
-- **Week 13:** Power BI dashboard clone deployed, failure documentation complete, regression started.
-- **Week 14:** Project #2 complete with presentation, three optimizer docs, regression model functional.
+Fri (Sep 5) — SQL drills 231–240 (joins + MRR queries)  
+Deliverable: sql/231-240_mrr_drills.sql
+
+Sat (Sep 6) — Pandas cohort analysis: monthly retention curves  
+Deliverable: analysis/cohort_analysis.ipynb
+
+Sun (Sep 7) — Customer segmentation EDA (phase 1)  
+Deliverable: analysis/project_02_customer_seg_eda.ipynb
+
+Mon (Sep 8) — Customer segmentation clustering + validation (phase 2)  
+Deliverable: analysis/project_02_customer_segmentation.ipynb
+
+Tue (Sep 9) — Attribution models (last-touch, first-touch, multi-touch)  
+Deliverable: analysis/attribution_models.ipynb
+
+Wed (Sep 10) — SQL Optimizer Case #2: EXPLAIN + indexing  
+Deliverable: sql/optimizer/explain_indexing.md
+
+Thu (Sep 11) — Dashboard refinement: polish UX + filters  
+Deliverable: visualizations/dashboard_v2.ipynb
+
+**Week 12 Outputs:** 10 SQL drills, cohort analysis notebook, segmentation notebook, attribution model, optimizer doc #2, polished dashboard.
 
 ---
 
-# 🎯 Concrete Deliverables by Week 14
+## Week 13 (Sep 12–18) — BI Tools + Regression Foundations
 
-## Technical Documentation
-- **3 optimizer case studies** with before/after benchmarks
-- **Customer segmentation model** with business validation
-- **A/B test analysis** with statistical rigor and business recommendations
+Fri (Sep 12) — Power BI tutorial: connect + 3 charts  
+Deliverable: visualizations/powerbi_tutorial.pbix
 
-## Portfolio Projects
-- **Project #1:** Employee analysis ✅ 
-- **Project #2:** Customer segmentation with clustering and business insights
-- **Project #3:** Regression analysis for pricing/marketing (foundation complete)
+Sat (Sep 13) — Power BI dashboard clone (replicate Python dashboard, phase 1)  
+Deliverable: visualizations/powerbi_clone_v1.pbix
 
-## Dashboards & Visualizations
-- **Interactive Plotly dashboard** with real business data
-- **Power BI dashboard clone** demonstrating cross-platform skills
-- **Executive summary presentations** for each major analysis
+Sun (Sep 14) — Power BI dashboard clone polish (phase 2)  
+Deliverable: visualizations/powerbi_clone_v2.pbix
 
-## Business Case Studies
-- **Revenue drop root cause analysis**
-- **Marketing attribution modeling**
-- **Unit economics and cohort retention analysis**
-- **Failure post-mortem with prevention framework**
+Mon (Sep 15) — Regression setup: dataset, cleaning, feature engineering  
+Deliverable: statistics/regression_setup.ipynb
 
-*Focus: Every task produces a concrete, demonstrable outcome that can be shown in interviews or added to portfolio.*
+Tue (Sep 16) — Advanced SQL drills 241–250 (attribution + churn prep)  
+Deliverable: sql/241-250_advanced_drills.sql
+
+Wed (Sep 17) — Statistics: confidence intervals + sample size calc  
+Deliverable: statistics/confidence_intervals.ipynb
+
+Thu (Sep 18) — Failure documentation: temporal leakage case study  
+Deliverable: analysis/failures/temporal_leakage.md
+
+**Week 13 Outputs:** 2 Power BI dashboards, regression prep notebook, SQL drills, confidence intervals notebook, failure doc.
+
+---
+
+## Week 14 (Sep 19–25) — Regression + Portfolio Consolidation
+
+Fri (Sep 19) — Regression modeling: build + validate model  
+Deliverable: statistics/regression_model.ipynb
+
+Sat (Sep 20) — Pandas Optimizer Case #3: merging benchmarks  
+Deliverable: pandas/perf/merging_benchmarks.md
+
+Sun (Sep 21) — Dashboard final polish + exec summary  
+Deliverable: visualizations/dashboard_final.ipynb
+
+Mon (Sep 22) — Marketing mix modeling setup (EDA + requirements)  
+Deliverable: analysis/project_03_marketing_mix_setup.ipynb
+
+Tue (Sep 23) — Business metrics: CAC, LTV, retention  
+Deliverable: analysis/business_metrics.ipynb
+
+Wed (Sep 24) — Regression presentation slides + recommendations  
+Deliverable: statistics/regression_presentation.pptx
+
+Thu (Sep 25) — Portfolio Project #2 final wrap (README, slides, polish)  
+Deliverable: analysis/project_02_final/
+
+**Week 14 Outputs:** Regression notebook + slides, optimizer doc #3, final dashboard, marketing mix setup, business metrics notebook, Project #2 final package.
+
+---
+
+## 🔑 Milestones by Week 14
+- Week 10: SQL windows drilled, A/B scaffold + dataset complete
+- Week 11: A/B analysis finalized, dashboard prototype, optimizer doc #1
+- Week 12: Cohort analysis, customer segmentation, optimizer doc #2
+- Week 13: Power BI dashboards complete, regression setup, failure doc
+- Week 14: Regression project finalized, Project #2 complete, optimizer doc #3
+
+---
+
+## 📌 Daily Execution Rules
+- Review previous day’s deliverable before starting.
+- Complete each task or phase as scoped (multi-day allowed for big tasks).
+- Document all code with business context explanations.
+- Commit deliverables same day.
+- No skipping phases; unfinished tasks roll over explicitly, not hidden.
