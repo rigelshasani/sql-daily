@@ -48,7 +48,7 @@ withinBounds
 percentage = (beyondBounds / (beyondBounds + withinBounds)) * 100
 percentage
 ```
-Here we see the percentage is 2.44%, or 120 values are beyond possible bounds(Assuming max age is 120 and minimum age is 1, since 0 year olds usually don't have any phone plans).
+Here we see the percentage is 2.44%, or 120 values are beyond possible bounds(Assuming max age is 120 and minimum age is 0.
 
 120 INVALID VALUES 
 4788 VALID VALUES
@@ -76,3 +76,51 @@ dtype: int64
 ```
 Okay it looks here like many of these columns have problematic counts, with many of the values missing, which we will have to fill out. 
 The Age column is missing 5150 - 4908 = **242 values**. And even the other columns are missing other values. It looks like 5150 is the actual number of customers, considering it gets repeated in contract, phone service and monthly_charges. 
+
+Let's check on another column to make sure. How about tenure_months?
+
+```python
+df_raw['tenure_months'].min()
+```
+This gives me 1.0, which is good, means it's valid. 
+
+```python
+df_raw['tenure_months'].max()
+```
+This gives me 72 months max, also valid.
+
+Now let's see the distribution:
+```python
+df_raw.groupby('tenure_months').size()
+```
+
+```
+tenure_months
+1.0     67
+2.0     65
+3.0     76
+4.0     86
+5.0     61
+        ..
+68.0    66
+69.0    79
+70.0    70
+71.0    66
+72.0    63
+Length: 72, dtype: int64
+```
+This distribution is pretty odd, as usually contracts are either 1/2/3/4 year, not so equally distributed each month. This is of course because the data is programmatically generated.
+
+Let's check for missingness.
+
+```python
+df_raw['tenure_months'].count()
+```
+Looks like its missing 161 values. 
+```
+np.int64(4994)
+``` 
+
+What I ran earlier was apparently called a Column Profiling. It's made up of a range + missingness check + distribution shape.
+
+Column Profiling: Numeric Range + Missingness + Distribution Shape.

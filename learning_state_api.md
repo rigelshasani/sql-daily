@@ -1,7 +1,7 @@
 # Learning State API
 
 **Last Updated:** 2025-08-27  
-**Session #:** 01 (Week 10)
+**Session #:** 02 (Week 10)
 
 ## Current Focus Areas (Max 3)
 - Data cleaning workflows and decision frameworks
@@ -14,7 +14,7 @@
 |---------------------------|-----------------------|-------|---------------|------------|
 | CTE_Usage | SQL Drills 151–155 | 0 | conquered | - |
 | Memory_Profiling_Pandas | Churn_Analysis | 0 | conquered | - |
-| Data_Quality_Assessment | Churn_Analysis | 1 | learning | - |
+| Data_Quality_Assessment | Churn_Analysis | 1 | under_review | 2025-09-03 |
 | Churn_Analysis_Concepts | Churn_Analysis | 0 | learning | - |
 | AB_Test_Design | AB_Test_Project | 1 | learning | - |
 | Business_Metrics | AB_Test_Project | 0 | learning | - |
@@ -24,6 +24,7 @@
 - **Aug 2025:** Pandas exercises 1-60 complete (skipped 47, 49)
 - **Aug 2025:** Memory profiling drill (43% memory savings)
 - **Aug 2025:** Updated churn analysis scaffolding (commit `441a074`, 2025-08-26 16:15)  
+- **Aug 2025:** Toy dataset Data Quality Report closure (invalid ages, missingness, flat tenure distribution)
 
 ## Learning Patterns
 - Needs concept introduction before domain-specific exercises
