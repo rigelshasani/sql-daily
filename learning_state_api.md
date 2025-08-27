@@ -10,23 +10,24 @@
 
 ## Learning Tracker
 
-| Pattern | Project | Fails | Status | Review_Due |
-|---------|---------|-------|--------|------------|
-| GROUPBY_vs_WINDOW | Q2_Revenue_Analysis | 4 | struggling | 2025-08-27 |
-| Data_Exploration_Workflows | Customer_Segmentation | 1 | struggling | 2025-09-01 |
-| Recursive_Traversal | - | 2 | learning | - |
-| Data_Quality_Assessment | Churn_Analysis | 1 | learning | - |
-| Churn_Analysis_Concepts | Churn_Analysis | 0 | learning | - |
-| AB_Test_Design | AB_Test_Project | 1 | learning | - |
-| Business_Metrics | AB_Test_Project | 0 | learning | - |
-| CTE_Usage | - | 0 | under_review | 2025-09-01 |
-| Boolean_Logic_Pandas | - | 0 | under_review | 2025-09-05 |
-| Column_Selection | - | 0 | conquered | - |
+| Pattern                   | Project               | Fails | Status        | Review_Due |
+|---------------------------|-----------------------|-------|---------------|------------|
+| GROUPBY_vs_WINDOW         | Q2_Revenue_Analysis   | 4     | struggling    | 2025-08-27 |
+| Data_Exploration_Workflows| Customer_Segmentation | 1     | struggling    | 2025-09-01 |
+| Recursive_Traversal       | -                     | 2     | learning      | -          |
+| Data_Quality_Assessment   | Churn_Analysis        | 1     | learning      | -          |
+| Churn_Analysis_Concepts   | Churn_Analysis        | 0     | learning      | -          |
+| AB_Test_Design            | AB_Test_Project       | 1     | learning      | -          |
+| Business_Metrics          | AB_Test_Project       | 0     | learning      | -          |
+| CTE_Usage                 | SQL Drills 151–155    | 0     | under_review  | 2025-09-01 |
+| Boolean_Logic_Pandas      | -                     | 0     | under_review  | 2025-09-05 |
+| Column_Selection          | -                     | 0     | conquered     | -          |
 
 ## Recent Completions
 - **Aug 2025:** SQL drills 151-155 (CTEs, window functions)  
 - **Aug 2025:** Pandas exercises 1-60 complete (skipped 47, 49)
 - **Aug 2025:** Memory profiling drill (43% memory savings)
+- **Aug 2025:** Updated churn analysis scaffolding (commit `441a074`, 2025-08-26 16:15)  
 
 ## Learning Patterns
 - Needs concept introduction before domain-specific exercises
