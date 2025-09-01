@@ -78,4 +78,109 @@ ORDER BY DEPT ASC, SALARY DESC;
 SELECT DEPT, FIRST_NAME, LAST_NAME, SALARY, 
 AVG(SALARY) OVER(PARTITION BY DEPT) AS AVG_SAL, (SALARY - AVG(SALARY) OVER(PARTITION BY DEPT)) AS DIFFERENCE
 FROM EMPLOYEES E 
-ORDER BY DEPT ASC, SALARY DESC
+ORDER BY DEPT ASC, SALARY DESC;
+
+-- 156 Using a recursive CTE, generate a sequence from 1 to 10.
+-- Return just one column called 'level_num'.
+-- Order by level_num ascending.
+
+WITH RECURSIVE countIt AS (
+    SELECT 1 AS start_val
+    UNION ALL 
+    SELECT start_val+1 
+    from countIt
+    WHERE start_val < 10
+)
+SELECT start_val
+FROM countIt
+ORDER BY start_val ASC;
+
+
+-- 157 Using a CTE with multiple aggregations, find departments where:
+-- - Average salary > 60000 AND
+-- - Total employees >= 3 AND  
+-- - Highest salary >= 80000
+-- Return dept, avg_salary, employee_count, max_salary.
+-- Order by avg_salary descending.
+
+WITH aggros AS (
+    SELECT DEPT, AVG(salary) AS avg_sal, COUNT(*) AS cnt, MAX(salary) AS max_sal
+    FROM EMPLOYEES
+    GROUP BY DEPT 
+    HAVING AVG(salary) > 60000 AND MAX(salary) > 80000 AND COUNT(*) >= 3
+)
+select *
+from aggros 
+order by avg_sal DESC;
+
+-- 158 Using nested CTEs (CTE that references another CTE), first identify
+-- departments with above-average headcount. Then from those departments only,
+-- show each employee's name, salary, and rank by salary within their dept.
+-- Order by dept ASC, rank ASC.
+
+WITH high_hdc AS (
+    SELECT DEPT, COUNT(*) AS cnt
+    FROM EMPLOYEES
+    WHERE dept is not null 
+    GROUP BY DEPT
+),
+avg_hdc AS (
+    SELECT AVG(cnt) as av
+    FROM high_hdc
+),
+abv_avg_depts AS (
+    SELECT h.dept, h.cnt, a.av
+    FROM avg_hdc a
+    CROSS JOIN high_hdc h
+    WHERE a.av < h.cnt
+)
+SELECT E.DEPT, E.FIRST_NAME, E.LAST_NAME, E.SALARY, RANK() OVER(PARTITION BY(A.DEPT) ORDER BY E.SALARY DESC) AS SALARY_RANK
+FROM abv_avg_depts A
+JOIN employees E
+ON A.dept = E.dept
+ORDER BY A.DEPT ASC;
+
+
+-- 159 Using a CTE with window functions, calculate a running total of salaries
+-- within each department (ordered by employee ID). 
+-- Return dept, emp_id, first_name, salary, running_total.
+-- Order by dept ASC, emp_id ASC.
+
+WITH running_total AS (
+    SELECT ID, FIRST_NAME, SALARY, DEPT, SUM(SALARY) OVER(PARTITION BY(DEPT) ORDER BY ID ASC) AS running_total
+    FROM employees
+    WHERE DEPT IS NOT NULL AND SALARY IS NOT NULL
+)
+SELECT *
+FROM running_total
+ORDER BY DEPT ASC, ID ASC;
+
+
+-- 160 Using a CTE, identify the department(s) with the highest total payroll.
+-- Then return ALL employees from those top-spending departments,
+-- showing dept, name, salary, and what percentage of the department's
+-- total payroll each employee represents.
+-- Order by dept ASC, salary_percentage DESC.
+
+WITH ordered_payrolls AS (
+    SELECT DEPT, SUM(SALARY) AS summed
+    FROM EMPLOYEES
+    WHERE DEPT IS NOT NULL
+    GROUP BY DEPT
+),
+highest_payroll as (
+    select MAX(summed) as max_sal
+    from ordered_payrolls
+
+),
+departments_maxed as (
+    select o.dept, h.max_sal
+    from ordered_payrolls o
+    join highest_payroll h
+    on o.summed = h.max_sal
+)
+SELECT E.DEPT, E.FIRST_NAME, E.LAST_NAME, E.SALARY, H.max_sal, ROUND(((E.SALARY * 1.0/H.max_sal) * 100), 2) AS pct
+FROM departments_maxed H
+JOIN EMPLOYEES E 
+ON h.dept = e.dept
+ORDER BY DEPT ASC, PCT DESC;
