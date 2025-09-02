@@ -1,0 +1,24 @@
+-- 19_analysis_case_studies.sql
+
+-- 191  Churn-style metric: Count how many employees were hired before 2015,
+--      and how many remain after 2020. Output counts and percentage retained.
+-- 192  Cohort analysis: Group employees by hire_year.
+--      For each year, show headcount and average salary.
+-- 193  A/B style slice: Split employees into buckets based on whether salary >= dept_avg.
+--      For each bucket, count employees and avg hire_year.
+-- 194  Revenue-like aggregation: For each dept, return total salary,
+--      % contribution to company total, ordered descending.
+-- 195  Distribution stats: For each dept, return salary_min, salary_max,
+--      salary_avg, and salary_stddev (if your SQL dialect supports STDDEV).
+-- 196  Quartiles: Using PERCENTILE_DISC(0.25,0.5,0.85),
+--      return Q1/median/Q3 salaries per dept.
+-- 197  Case study: “High-risk departments.” Define as
+--      (avg salary < 60000 AND headcount > 5). List dept and metrics.
+-- 198  Promotion proxy: For each manager, find employees earning more than the manager.
+--      Output: manager_name, employee_name, salary_gap.
+-- 199  Employee retention: Count employees still with NULL manager_id
+--      (top-level) vs those with manager assigned. Show percentages.
+-- 200  Pipeline layering: Build a 3-CTE chain:
+--      (a) dept payrolls,
+--      (b) above-avg payroll depts,
+--      (c) employees within those depts ranked by salary.

@@ -1,0 +1,24 @@
+-- 18_knowledge_gaps.sql
+
+-- 181  For each department, return the 2nd-highest salary (distinct values).
+--      Use ROW_NUMBER() or DENSE_RANK().
+--      Output: dept, second_highest_salary.
+-- 182  Re-do #70: Return departments where the 2nd-highest salary > 80000.
+--      Use ROW_NUMBER() approach, not HAVING hacks.
+-- 183  For each manager, count how many reports earn ABOVE that manager’s avg report salary.
+--      Output: manager_name, above_avg_count.
+-- 184  Complete #75 properly: Departments where at least 2 employees earn
+--      more than their own dept average salary.  
+-- 185  Per-capita budget comparison (#88 fix): For each dept, compute budget/employee_count
+--      then list employees whose salary > per_capita_budget.
+-- 186  Compare RANK() vs DENSE_RANK() within each dept by salary.
+--      Output both columns so you can see the difference.
+-- 187  Demonstrate the NULL trap: Count employees per dept using COUNT(first_name)
+--      vs COUNT(*) in a LEFT JOIN with DEPARTMENTS. Show the difference.
+-- 188  Rewrite supervisor check (#147) using EXISTS instead of NOT IN.
+--      Label each employee SUPERVISOR/NON_SUPERVISOR.
+-- 189  Explicit LAST_VALUE frame: For each dept, show each employee’s hire_date,
+--      dept_first_hire (FIRST_VALUE), dept_last_hire (LAST_VALUE with
+--      ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING).
+-- 190  Add tiebreakers: For each dept, rank employees by salary with ROW_NUMBER,
+--      breaking ties by employee id. Return top 3 per dept.
