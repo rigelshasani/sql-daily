@@ -12,7 +12,7 @@
 | Pattern | Project | Attempts | Notes |
 |---------|---------|----------|-------|
 | Churn_Analysis_Concepts | Churn_Analysis | 0 | new concept |
-| AB_Test_Design | AB_Test_Project | 1 | learning |
+| AB_Test_Design | AB_Test_Project | 0 | conquered |
 | Business_Metrics | AB_Test_Project | 0 | new concept |
 
 ## Key Learning Rules

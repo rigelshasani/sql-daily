@@ -1,35 +1,29 @@
 # Learning Journal
 
-**Last Updated:** Aug 27, 2025  
-**Session #:** 75
+**Last Updated:** Sep 03, 2025  
+**Session #:** 3
 
-## Recent Session Reflection
+## Latest Session
+**Date:** 2025-09-03  
+**Focus:** A/B Testing fundamentals  
+**Breakthrough:** A/B testing clicked as conversion rate comparison + consistency checking, not just raw numbers  
+**Frustration:** Sample size intuition still fuzzy - why bigger samples = more confidence  
+**Next Focus:** Statistical significance calculations, hypothesis formulation
 
-**Breakthrough:** Data cleaning clicked as strategic business decisions, not just technical fixes. Creating `is_login_date_missing` boolean preserved customer records while flagging missing data as potential signal.
+## How I Learn Best
+- Need concept intro before domain work
+- Breakthroughs after 2-3 contexts of same pattern  
+- Learn by failing and fixing, not receiving solutions
+- Must understand business context first
 
-**Frustration:** None - business context introduction protocol worked well.
-
-**Confidence:** Medium-High  
-**Energy:** High
-
-## Key Learning Insights (Persistent)
-
-**How I Learn Best:**
-- Need concept introduction before domain-specific work
-- Breakthroughs happen after 2-3 different contexts of same pattern  
-- Function best with "fail and fix" rather than receiving solutions
-- Must understand business context before technical implementation
-
-**Teaching Calibration:**
-- High energy = good time for complex, multi-step workflows
-- When frustrated, step back to fundamentals rather than push through
-- Respond well to systematic approaches and frameworks
-- Need to understand "why" behind fixes, not just "what" to type
-
-## Recent Breakthroughs (Last 5)
-
-- **Aug 27:** Data cleaning as strategic trade-offs (remove vs impute vs flag)
+## Recent Breakthroughs
+- **Sep 03:** A/B testing as fair comparison (conversion rates) + consistency over time
+- **Aug 27:** Data cleaning as strategic business decisions, not technical fixes
 - **Aug 26:** Professional data skepticism - assess scope before fixing  
-- **Aug 25:** CTEs as "temporary named subqueries" - mental model clicked
+- **Aug 25:** CTEs as "temporary named subqueries"
 - **Aug 24:** Department-level vs employee-level calculations
-- **Aug 23:** Normalization before composite scoring
+
+## Teaching Notes
+- High energy = good for complex workflows
+- When frustrated, step back to fundamentals
+- Need to understand "why" behind fixes
