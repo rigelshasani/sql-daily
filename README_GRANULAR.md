@@ -2,24 +2,24 @@
 
 
 **COMPLETED:**
-Pandas deep-dive: memory profiling on churn dataset  
-SQL drills 151–155 (CTEs), Memory profiling doc 
-Started Pandas churn analysis (0.79h)  
-**Completed toy churn analysis** (2.19h)
-Project restructuring 
-SQL drills 156–160 CTEs
-SQL drills 161–170 Review Exercises
+- Pandas deep-dive: memory profiling on churn dataset  
+- SQL drills 151–155 (CTEs), Memory profiling doc 
+- Started Pandas churn analysis (0.79h)  
+- **Completed toy churn analysis** (2.19h)
+- Project restructuring 
+- SQL drills 156–160 CTEs
+- SQL drills 161–170 Review Exercises
+- **A/B Testing fundamentals** (statistical significance, conversion rates, segmentation analysis)
+- **Business-context visualization** (matplotlib bar charts, visual hierarchy, complex layering)
+- ✅ **Viz Chart #1: Business-context chart** - `visualizations/charts/bar_chart_business.ipynb`
 
 Todo: 
 
-2. **A/B test scaffold setup** 
-   - Hypothesis formulation + metric framework
+2. **A/B test scaffold setup** - IN PROGRESS
+   - ✅ A/B testing fundamentals conquered 
+   - Remaining: Hypothesis formulation + metric framework implementation
    - **Deliverable:** `statistics/ab_test/scaffold.ipynb`
    - **Contributes to:** Statistics projects track (1/7 initiated)
-
-3. **Viz Chart #1: Business-context chart** 
-   - **Deliverable:** `visualizations/charts/bar_chart_business.ipynb`
-   - **Contributes to:** Visualization track (1/25 complete)
 
  — Pandas Performance Focus 
   - Deep-dive #3: Memory optimization with chunking (2h)
@@ -37,7 +37,8 @@ Todo:
 | **Focus:** Dashboard prototype + statistical analysis
 
 — A/B Statistical Analysis
-- Complete t-test, chi-square analysis + interpretation
+- ✅ A/B testing conceptual foundation complete
+- Remaining: Complete t-test, chi-square analysis + interpretation
 - *Deliverable: statistics/ab_test/analysis.ipynb*
 
 — Dashboard Prototype Phase 1 
@@ -170,7 +171,7 @@ Regression + Portfolio Consolidation
 ### By End of Week 14 Target Progress:
 - **SQL Advanced:** 40/80 drills (50% complete) ✅ Halfway milestone
 - **Pandas Deep-Dives:** 12/45 complete (27% → strong momentum) ✅  
-- **Visualizations:** 7/25 charts + 2 dashboards complete ✅ 
+- **Visualizations:** 8/25 charts + 2 dashboards complete ✅ 
 - **Statistics Projects:** 3/7 projects complete (A/B, regression, marketing mix setup) ✅
 - **BI Tools:** 2 Power BI dashboards complete ✅
 - **Portfolio:** Project #2 finalized ✅
