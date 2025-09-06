@@ -1,4 +1,4 @@
--- 20_review_part2.sql
+-- 17_review_part2.sql
 
 -- 171  For each department, return the 2nd-highest salary (distinct values).
 --      Use a CTE with a window function (DENSE_RANK).
