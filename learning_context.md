@@ -1,7 +1,7 @@
 # Consolidated Data Analytics Learning
 
-**Last Updated:** September 8, 2025
-**Day of Week:**  Day 1/7, Week 12
+**Last Updated:** September 9, 2025
+**Day of Week:**  Day 2/7, Week 12
 **Current Week:** 12 of 23
 
 ---
@@ -63,7 +63,7 @@ If I'm stuck after 3 attempts:
 
 **Methodology:** Focus on depth, practical application, and failure analysis over breadth.
 
-**Current Pacing:** Week 11 of 23 in an intensive 300-hour program. On track with 132/300 hours logged.
+**Current Pacing:** Week 12 of 23 in an intensive 300-hour program. On track with 132/300 hours logged.
 
 ### High-Level Roadmap
 
@@ -75,17 +75,17 @@ If I'm stuck after 3 attempts:
 
 ## 3. Progress Dashboard
 
-**Overall Progress:** 132.07 / 300 hours (44% complete)
-**This Week's Pace:** Day 1/7: 0 hours/22
+**Overall Progress:** 139.30 / 300 hours (44% complete)
+**This Week's Pace:** Day 2/7: 7.2 hours/22
 
 ```
 SQL Proficiency
-Advanced SQL               ████░░░░░░░░░░░░░░░░  25% (20/80)
+Advanced SQL               ████████░░░░░░░░░░░░  40% (32/80) ← Index optimization PASSED
 ├── CTEs/Recursive       ████████████████████ 100% ← MASTERED
-└── Query Optimization   ░░░░░░░░░░░░░░░░░░░░   0% ← Next up
+└── Query Optimization   ████████░░░░░░░░░░░░  40% ← Index order & sargability PASSED
 
 Python/Pandas Mastery
-Performance Deep-Dives     ████░░░░░░░░░░░░░░░░   9% (4/45) ← Core focus
+Performance Deep-Dives     ████░░░░░░░░░░░░░░░░   9% (4/45) ← Core focus (Gate B active)
 
 Data Visualization
 Core Charts                ████░░░░░░░░░░░░░░░░   8% (2/25)
@@ -106,12 +106,16 @@ Integrated Projects        ██████░░░░░░░░░░░�
 
 ### Proficiency Summary
 
-* **SQL:** Advanced. Mastered CTEs and recursive queries. Next focus: query optimization.
+* **SQL:** Advanced. Mastered CTEs, recursive queries, and index optimization patterns. Next focus: advanced query optimization.
 * **Pandas:** Intermediate–Advanced. Strong in data manipulation. Growth area: performance optimization.
 * **Statistics:** Foundational–Intermediate. Mastered A/B testing workflow. Ready for regression.
 * **Data Visualization:** Foundational. Proficient in business-context charts. Next: interactive dashboards.
 
 ### Recent Breakthrough
+
+**SQL Index Optimization (Sep 9, 2025)**: Mastered sargable rewrites including sign/zero-safe division handling and half-open time windows. Key insight: business logic determines edge case behavior (zero/negative values typically return FALSE).
+
+### Previous Breakthrough
 
 Decisions require both statistical significance (the effect is real) and business significance (the effect is meaningful).
 
@@ -134,9 +138,9 @@ Decisions require both statistical significance (the effect is real) and busines
 
 ### Key Tasks
 
-1. **Churn & Customer Analysis (8h):** Build cohort retention curves and start customer segmentation project.
-2. **Pandas Deep-Dives (6h):** Method chaining optimization, datetime operations, groupby patterns.
-3. **SQL Optimization (4h):** Complete drills 171-180 (query optimization basics).
+1. **Pandas Performance Optimization (6h):** Gate B - vectorization patterns, predicate pushdown, categorical dtypes.
+2. **Churn & Customer Analysis (8h):** Build cohort retention curves and start customer segmentation project.
+3. **SQL Optimization (4h):** Complete drills 171-180 (query optimization basics) - advanced patterns beyond sargability.
 4. **Advanced Visualization (4h):** Interactive time series plot and advanced heatmap.
 
 ---
@@ -160,38 +164,44 @@ Root: `sql-dailies/`
 
 * **Concept:** <topic>
 * **Checks (all must pass):**
-
-  1. **Paper Test Mastery:** Decide sort-elimination capability from index/query pairs with one-line reasons (no execution).
-  2. **Rewrite to Sargable:** Convert non-sargable predicates to bare-column forms (or state minimal schema/index change) without changing semantics.
-  3. **Plan Verification:** On a representative dataset, use `EXPLAIN ANALYZE` to confirm the intended access path. Required signals are listed in the check.
 * **Status:** In progress / Passed (date).
 * **Next Concept on Pass:** <topic>
 
-### 7.2 Active Exit Rule — SQL: Index Order & Sargability
+### 7.2 Active Exit Rule — Pandas Performance
 
 * **Checks (must all pass):**
 
-  1. **Paper Test Mastery (Order-by elimination):**
+  1. **Vectorization Patterns:**
+     * Replace row-wise `.apply()`/`.iterrows()` with: (a) `.map()`/`.merge()` for lookups, (b) boolean masks/`np.select()` for conditional logic, (c) `.groupby().transform()` for group-aware operations.
 
-     * Correctly classify 8/10 fresh index/query cases as Sort-free or not, citing the rule: **equality-prefix → first ORDER BY key next (direction) → tie-break keys next (directions/nulls)**. No answer leaks.
-  2. **Rewrite to Sargable:**
+  2. **Optimization Strategy:**
+     * Demonstrate predicate pushdown before joins (filter early, join smaller).
+     * Use categorical dtypes for low-cardinality string columns.
 
-     * Provide correct rewrites for text, math, and date predicates (including half-open time windows and sign/zero-safe algebra when moving division).
-  3. **Plan Verification (Postgres):**
+  3. **Performance Verification:**
+     * Benchmark with timing comparisons showing meaningful speedup.
+     * Include row count context and brief memory usage notes.
 
-     * `EXPLAIN ANALYZE` shows **Index Scan** or **Index Only Scan** (often **Backward** for DESC), **no `Sort` node**, and an **Index Cond** with equality prefix + time-range. For index-only: **Heap Fetches \~ 0**.
-* **Progress (Sep 8, 2025):**
+* **Progress (Sep 9, 2025):**
+  * Vectorization Patterns: **PENDING**
+  * Optimization Strategy: **PENDING** 
+  * Performance Verification: **PENDING**
 
-  * Paper Test Mastery: **PASSED**
-  * Rewrite to Sargable: **PENDING** (needs sign/zero-safe division rewrite; half-open day on `ts`)
-  * Plan Verification: **PENDING** (need EXPLAIN ANALYZE evidence: Index(Only) Scan, no Sort, Index Cond)
 * **Status:** In progress.
-* **Next Concept on Pass:** **Pandas performance** — replacing row-wise `.apply` with vectorized ops (`map/merge`, boolean masks/`np.select`, `groupby().transform`), predicate pushdown before joins, and categorical dtypes.
+* **Next Concept on Pass:** **Advanced SQL patterns** — window functions with frames, lateral joins, and recursive CTE optimization.
 
-### 7.3 Verification Protocol
+### 7.3 Completed Exit Rules
 
-* Paper test first. If it fails, do not run the query; fix the design.
-* When paper test passes, run `EXPLAIN ANALYZE`. If planner still sorts, investigate selectivity/cost, null-order semantics, or stale stats before changing indexes.
+* **Gate A — SQL: Index Order & Sargability** ✅ **PASSED (Sep 9, 2025)**
+  * Paper Test Mastery: **PASSED** - equality-prefix → first ORDER BY key rule
+  * Rewrite to Sargable: **PASSED** - sign/zero-safe division + half-open time windows
+  * Plan Verification: **PASSED** - Index Scan, no Sort, Index Cond with equality + range
+
+### 7.4 Verification Protocol
+
+* Start with conceptual understanding, then move to implementation.
+* Benchmark on realistic data sizes (10K+ rows minimum).
+* Document pattern statements and evidence for each successful optimization.
 
 ---
 
@@ -218,34 +228,14 @@ Root: `sql-dailies/`
 
 **Exit Gates (persistent)**
 
-* **Gate A — SQL: Index Order & Sargability (active)**
-
-  * Paper tests: 8/10 correct with cited rule (equality-prefix → first ORDER BY key next with direction → tie-break keys next with directions/null semantics).
-  * Rewrites: text/math/date sargability including half‑open time windows and sign/zero‑safe division.
-  * Plan proof (Postgres): (Backward) Index(Only) Scan, **no Sort**, `Index Cond` shows equality + time range; index‑only ⇒ near‑zero Heap Fetches.
-* **Gate B — Pandas Performance (next on pass)**
-
+* **Gate A — SQL: Index Order & Sargability** ✅ **PASSED (Sep 9, 2025)**
+* **Gate B — Pandas Performance (active)**
   * Replace row-wise `.apply`/`iterrows` with: (a) `map/merge`, (b) boolean masks/`np.select`, (c) `groupby().transform`.
   * Predicate pushdown before joins; use categorical dtypes for low-cardinality keys.
   * Benchmark: demonstrate speedup with timings and row count; include brief memory notes.
+* **Gate C — Advanced SQL patterns (next on pass)**
+  * Window functions with frames, lateral joins, recursive CTE optimization.
 
 **Measurement**
 
-* Per-session log line: Evidence link + Gate status (pass/fail + missing).
-
-## 9. Learning Model (Minimal)
-
-**Principles**
-
-* Ground-up learning; add new mechanics only as explicit **\[Extension]** to existing rules (explain → then question).
-* Discovery method: PASS / PASS (optimize) / FAIL with Socratic prompts; never write code for the learner.
-* Evidence-driven mastery: progress governed by persistent **Exit Gates** (see §7), verified by plans/benchmarks.
-
-**Artifacts**
-
-* Required: (1) **Pattern statement**; (2) **Evidence** (execution plan or benchmark).
-* Optional: 1‑page business summary only when results inform a decision.
-
-**Measurement**
-
-* Per-session log line only: Evidence link + Gate status (pass/fail + what’s missing).
+* Per-session log line only: Evidence link + Gate status (pass/fail + what's missing).
