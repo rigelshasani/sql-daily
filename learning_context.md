@@ -31,7 +31,7 @@ This section defines how my tutor must interact with me. These rules are constan
 
 * For syntax errors: "I notice a potential issue in your [area]. See if you can spot it?"
 * For logic errors: Ask 1–2 targeted questions to guide thinking. Don't give the answer.
-* If I ask for code directly: Redirect with "What do you think the first step should be?"
+* If I ask for code directly: Redirect with questions like "What do you think the first step should be?" or "How would you approach this problem?"
 
 **Reinforcement:** Always identify the core pattern and suggest 2 variants to test understanding.
 
@@ -51,7 +51,7 @@ If I'm stuck after 3 attempts:
 ### Teaching Philosophy — Disclosure & Sequencing (Updated)
 
 * Introduce **new mechanics explicitly as extensions** of prior concepts before quizzing.
-* Do **explain → then question**, no cold-quizzing.
+* Do **explain → then question**. Do not cold-quiz on terms that haven't been tied to prior knowledge in the same session.
 * **No answer leaks** during exit-criteria tests. Provide tasks and pass conditions only.
 * Prefer minimalism: blunt feedback, direct corrections. No filler.
 
@@ -71,11 +71,12 @@ If I'm stuck after 3 attempts:
 **Current Pacing:** Week 12 of 23 in an intensive 300-hour program. On track with 139/300 hours logged.
 
 ### High-Level Roadmap
-
-* **Weeks 12–14:** Reflex foundations in SQL/Pandas (groupby, transform, map, joins). BI Tools (Power BI/Tableau), Regression foundations. Dashboard #1.
-* **Weeks 15–18:** Advanced SQL (window frames, lateral joins). Pandas chaining and performance optimization. Regression/logistic. Dashboard #2.
+* **Weeks 12–14:** Reflex foundations in SQL/Pandas (groupby, transform, map, joins). BI Tools (Power BI/Tableau), Customer Analytics (Churn, Segmentation), Regression foundations. Dashboard #1.
+* **Weeks 15–18:** Advanced SQL (window frames, lateral joins). Pandas chaining and performance optimization. Portfolio expansion with advanced projects (Time Series, Attribution) . Dashboard #2.
 * **Weeks 19–20:** End-to-end analysis projects (churn, cohort, attribution). Time series + validation.
-* **Weeks 21–23:** Final polish: portfolio, dashboards, mock interviews, failure docs.
+* **Weeks 21–23:** Finalize projects, conduct mock interviews, develop specialization, and launch job search
+
+---
 
 ## 3. Progress Dashboard
 
@@ -233,11 +234,12 @@ Root: `sql-dailies/`
 **Exit Gates (persistent)**
 
 * **Gate A — SQL: Index Order & Sargability** ✅ **PASSED (Sep 9, 2025)**
-* **Gate B — Pandas Performance** ✅ **PASSED (Sep 9, 2025)**
-* **Gate C — Advanced SQL patterns (active)**
-  * Window functions with frames, lateral joins, recursive CTE optimization.
-* **Gate D — Statistical Modeling (next on pass)**
-  * Regression analysis, model validation, business interpretation.
+* **Gate B — Pandas Performance** ✅ **PASSED (Sep 9, 2025)**  
+* **Gate C — Advanced SQL Patterns** ✅ **INTRODUCED (Sep 9, 2025)**
+* **Gate D — Statistical Modeling (active)**
+  * Regression foundations, model validation, business application.
+* **Gate E — Customer Analytics (next on pass)**
+  * Churn prediction, cohort analysis, segmentation.
 
 **Measurement**
 
