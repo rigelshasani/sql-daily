@@ -229,12 +229,11 @@ Root: `sql-dailies/`
 **Exit Gates (persistent)**
 
 * **Gate A — SQL: Index Order & Sargability** ✅ **PASSED (Sep 9, 2025)**
-* **Gate B — Pandas Performance (active)**
-  * Replace row-wise `.apply`/`iterrows` with: (a) `map/merge`, (b) boolean masks/`np.select`, (c) `groupby().transform`.
-  * Predicate pushdown before joins; use categorical dtypes for low-cardinality keys.
-  * Benchmark: demonstrate speedup with timings and row count; include brief memory notes.
-* **Gate C — Advanced SQL patterns (next on pass)**
+* **Gate B — Pandas Performance** ✅ **PASSED (Sep 9, 2025)**
+* **Gate C — Advanced SQL patterns (active)**
   * Window functions with frames, lateral joins, recursive CTE optimization.
+* **Gate D — Statistical Modeling (next on pass)**
+  * Regression analysis, model validation, business interpretation.
 
 **Measurement**
 
