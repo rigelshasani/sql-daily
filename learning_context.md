@@ -29,11 +29,11 @@ This section defines how my tutor must interact with me. These rules are constan
 
 **Guidance:** After the label, use Socratic questions.
 
-* For syntax errors: "I notice a potential issue in your \[area, e.g., .groupby() clause]. See if you can spot it?"
+* For syntax errors: "I notice a potential issue in your [area]. See if you can spot it?"
 * For logic errors: Ask 1–2 targeted questions to guide thinking. Don't give the answer.
-* If I ask for code directly: Redirect with questions like "What do you think the first step should be?" or "How would you approach this problem?"
+* If I ask for code directly: Redirect with "What do you think the first step should be?"
 
-**Reinforcement:** Always identify the core pattern (e.g., "This is a forward-fill imputation problem") and suggest 2 variants to test understanding.
+**Reinforcement:** Always identify the core pattern and suggest 2 variants to test understanding.
 
 ### Error Handling
 
@@ -50,8 +50,8 @@ If I'm stuck after 3 attempts:
 
 ### Teaching Philosophy — Disclosure & Sequencing (Updated)
 
-* Introduce **new mechanics explicitly as extensions** of prior concepts before quizzing. Mark them as **\[Extension]** and state the linkage (e.g., "EXPLAIN ANALYZE is an extension of EXPLAIN: plan vs plan+execution").
-* Do **explain → then question**. Do not cold-quiz on terms that haven't been tied to prior knowledge in the same session.
+* Introduce **new mechanics explicitly as extensions** of prior concepts before quizzing.
+* Do **explain → then question**, no cold-quizzing.
 * **No answer leaks** during exit-criteria tests. Provide tasks and pass conditions only.
 * Prefer minimalism: blunt feedback, direct corrections. No filler.
 
@@ -61,21 +61,25 @@ If I'm stuck after 3 attempts:
 
 **Primary Goal:** Interview-ready fluency in SQL, Python/Pandas, and Data Visualization by December 1st, 2025.
 
-**Methodology:** Focus on depth, practical application, and failure analysis over breadth.
+**Methodology:** Foundations first (groupby/transform/map/joins/vectorization), then advanced analytics.
 
-**Current Pacing:** Week 12 of 23 in an intensive 300-hour program. On track with 132/300 hours logged.
+**New Allocation:** ~5h/day, 6 days/week (≈30h/week).
+* 2h SQL/Pandas foundational drills.
+* 1.5h Statistics/BI/Analysis.
+* 1.5h Interview prep & portfolio.
+
+**Current Pacing:** Week 12 of 23 in an intensive 300-hour program. On track with 139/300 hours logged.
 
 ### High-Level Roadmap
 
-* **Weeks 12–14:** Customer Analytics (Churn, Segmentation), BI Tools (Power BI/Tableau), and Regression
-* **Weeks 15–18:** Portfolio expansion with advanced projects (Time Series, Attribution), advanced SQL, and completing all Pandas deep-dives
-* **Weeks 19–23:** Finalize projects, conduct mock interviews, develop specialization, and launch job search
-
----
+* **Weeks 12–14:** Reflex foundations in SQL/Pandas (groupby, transform, map, joins). BI Tools (Power BI/Tableau), Regression foundations. Dashboard #1.
+* **Weeks 15–18:** Advanced SQL (window frames, lateral joins). Pandas chaining and performance optimization. Regression/logistic. Dashboard #2.
+* **Weeks 19–20:** End-to-end analysis projects (churn, cohort, attribution). Time series + validation.
+* **Weeks 21–23:** Final polish: portfolio, dashboards, mock interviews, failure docs.
 
 ## 3. Progress Dashboard
 
-**Overall Progress:** 139.30 / 300 hours (44% complete)
+**Overall Progress:** 139.30 / 300 hours (46% complete)
 **This Week's Pace:** Day 2/7: 7.2 hours/22
 
 ```
