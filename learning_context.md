@@ -159,7 +159,7 @@ Timed SQL Challenges      ░░░░░░░░░░░░░░░░░░
 
 ---
 
-## 5. Immediate Action Plan: Week 12 (Sep 15–21)
+## 5. Immediate Action Plan: Week 13 (Sep 15–21)
 
 **Weekly Goal:** Log 22 hours with interview focus
 
@@ -208,14 +208,14 @@ Root: `sql-dailies/`
 
 **Purpose:** Gate movement to the next concept. The exit rule is set at session start and **persists across sessions** until met. It can span multiple days.
 
-### 7.1 Active Exit Rule — SQL Interview Fundamentals
+### 7.1 Exit Rule Template
 
 * **Concept:** <topic>
 * **Checks (all must pass):**
 * **Status:** In progress / Passed (date).
 * **Next Concept on Pass:** <topic>
 
-### 7.2 Active Exit Rule 
+### 7.2 Active Exit Rule — SQL Interview Fundamentals
 
 * **Concept:** SQL Interview Readiness
 * **Checks (must all pass):**
