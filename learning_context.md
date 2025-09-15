@@ -1,8 +1,8 @@
-# Consolidated Data Analytics Learning
+# Consolidated Data Analytics Learning - Interview Focused
 
-**Last Updated:** September 9, 2025
-**Day of Week:**  Day 2/7, Week 12
-**Current Week:** 12 of 23
+**Last Updated:** September 15, 2025
+**Day of Week:**  Day 1/7, Week 13
+**Current Week:** 13 of 23
 
 ---
 
@@ -48,8 +48,9 @@ If I'm stuck after 3 attempts:
 * Generate a proposed update for the "Current Learning State" section, noting new breakthroughs, misconceptions, and topics for review.
 * Record pass/fail status against the **Active Exit Rule** and carry it forward if unmet.
 
-### Teaching Philosophy — Disclosure & Sequencing (Updated)
+### Teaching Philosophy — Business Context First
 
+* **Every technical concept starts with business problem context** before introducing the tool.
 * Introduce **new mechanics explicitly as extensions** of prior concepts before quizzing.
 * Do **explain → then question**. Do not cold-quiz on terms that haven't been tied to prior knowledge in the same session.
 * **No answer leaks** during exit-criteria tests. Provide tasks and pass conditions only.
@@ -59,50 +60,65 @@ If I'm stuck after 3 attempts:
 
 ## 2. Master Plan & High-Level Strategy
 
-**Primary Goal:** Interview-ready fluency in SQL, Python/Pandas, and Data Visualization by December 1st, 2025.
+**Primary Goal:** Interview-ready fluency in SQL, Python/Pandas, Statistics, and Business Analytics by December 1st, 2025.
 
-**Methodology:** Foundations first (groupby/transform/map/joins/vectorization), then advanced analytics.
+**Methodology:** Interview fundamentals first (SQL basics, probability, business metrics), then advanced optimization.
 
 **New Allocation:** ~5h/day, 6 days/week (≈30h/week).
-* 2h SQL/Pandas foundational drills.
-* 1.5h Statistics/BI/Analysis.
-* 1.5h Interview prep & portfolio.
+* 2h SQL Interview Fundamentals (JOINs, window functions, data cleaning).
+* 1.5h Statistics & Probability Foundations.
+* 1h Business Analytics & Metrics.
+* 0.5h Pandas Interview Patterns (data cleaning, EDA).
 
-**Current Pacing:** Week 12 of 23 in an intensive 300-hour program. On track with 139/300 hours logged.
+**Current Pacing:** Week 13 of 23 in an intensive 300-hour program. On track with 146/300 hours logged.
 
-### High-Level Roadmap
-* **Weeks 12–14:** Reflex foundations in SQL/Pandas (groupby, transform, map, joins). BI Tools (Power BI/Tableau), Customer Analytics (Churn, Segmentation), Regression foundations. Dashboard #1.
-* **Weeks 15–18:** Advanced SQL (window frames, lateral joins). Pandas chaining and performance optimization. Portfolio expansion with advanced projects (Time Series, Attribution) . Dashboard #2.
-* **Weeks 19–20:** End-to-end analysis projects (churn, cohort, attribution). Time series + validation.
-* **Weeks 21–23:** Finalize projects, conduct mock interviews, develop specialization, and launch job search
+### High-Level Roadmap (Revised)
+* **Weeks 12–14:** SQL Interview Mastery (JOINs with edge cases, window functions, data cleaning). Probability Foundations (Bayes, distributions, hypothesis testing). Basic business metrics.
+* **Weeks 15–17:** Advanced SQL patterns + Mock Interview Prep. Customer Analytics (cohort, churn, segmentation). Statistical modeling foundations.
+* **Weeks 18–19:** End-to-end interview projects. Portfolio development with business-focused case studies.
+* **Weeks 20–21:** Mock interviews, timed SQL challenges, interview question bank completion.
+* **Weeks 22–23:** Final polish, specialization development, and job search launch.
 
 ---
 
 ## 3. Progress Dashboard
 
-**Overall Progress:** 139.30 / 300 hours (46% complete)
-**This Week's Pace:** Day 2/7: 7.2 hours/22
+**Overall Progress:** 146.36 / 300 hours (48.7% complete)
+**This Week's Pace:** Day 1/7: 1 hour/22
 
 ```
-SQL Proficiency
-Advanced SQL               ████████░░░░░░░░░░░░  40% (32/80) ← Index optimization PASSED
+SQL Interview Readiness
+Core JOINs & Aggregations ██░░░░░░░░░░░░░░░░░░░░  10% (8/80) ← Priority focus
+├── JOIN Edge Cases      ░░░░░░░░░░░░░░░░░░░░   0% ← Active target
+├── Window Functions     ████░░░░░░░░░░░░░░░░  20% ← Business context needed
+└── Data Cleaning SQL    ░░░░░░░░░░░░░░░░░░░░   0% ← Interview critical
+
+Advanced SQL               ████████░░░░░░░░░░░░  40% (32/80) ← Maintain, don't expand
 ├── CTEs/Recursive       ████████████████████ 100% ← MASTERED
-└── Query Optimization   ████████░░░░░░░░░░░░  40% ← Index order & sargability PASSED
+└── Query Optimization   ████████░░░░░░░░░░░░  40% ← Backburner
 
-Python/Pandas Mastery
-Performance Deep-Dives     ████░░░░░░░░░░░░░░░░   9% (4/45) ← Core focus (Gate B active)
+Statistics & Probability
+Probability Foundations    ░░░░░░░░░░░░░░░░░░░░   0% (0/40) ← New priority area
+├── Bayes Theorem        ░░░░░░░░░░░░░░░░░░░░   0% ← Start here
+├── Distributions        ░░░░░░░░░░░░░░░░░░░░   0%
+└── Hypothesis Testing   ██████░░░░░░░░░░░░░░  30% ← A/B testing foundation
 
-Data Visualization
-Core Charts                ████░░░░░░░░░░░░░░░░   8% (2/25)
-Interactive Dashboards     ░░░░░░░░░░░░░░░░░░░░   0% (0/4)
+Business Analytics
+Customer Metrics           ██░░░░░░░░░░░░░░░░░░  10% (1/25) ← Interview focus
+├── Cohort Analysis       ░░░░░░░░░░░░░░░░░░░░   0% ← Next up
+├── Churn Prediction      ░░░░░░░░░░░░░░░░░░░░   0%
+└── A/B Testing          ████████████████████ 100% ← MASTERED
 
-Statistical Analysis
-Applied Projects           ██████░░░░░░░░░░░░░░  29% (2/7)
-├── A/B Test (end-to-end) ████████████████████ 100% ← MASTERED
-└── Cohort Analysis       ░░░░░░░░░░░░░░░░░░░░   0% ← Next up
+Pandas Interview Patterns
+Data Cleaning Workflows    ░░░░░░░░░░░░░░░░░░░░   0% (0/20) ← Interview critical
+EDA & Reshaping           ██░░░░░░░░░░░░░░░░░░  10% ← Basic proficiency
 
-Portfolio Development
-Integrated Projects        ██████░░░░░░░░░░░░░░  17% (1/6)
+Performance Optimization   ████░░░░░░░░░░░░░░░░   9% (4/45) ← Deprioritized
+
+Interview Preparation
+Question Bank             ░░░░░░░░░░░░░░░░░░░░   0% (0/100) ← New tracking
+Mock Interviews           ░░░░░░░░░░░░░░░░░░░░   0% (0/10)
+Timed SQL Challenges      ░░░░░░░░░░░░░░░░░░░░   0% (0/20)
 ```
 
 ---
@@ -111,42 +127,67 @@ Integrated Projects        ██████░░░░░░░░░░░�
 
 ### Proficiency Summary
 
-* **SQL:** Advanced. Mastered CTEs, recursive queries, and index optimization patterns. Next focus: advanced query optimization.
-* **Pandas:** Intermediate–Advanced. Strong in data manipulation. Growth area: performance optimization.
-* **Statistics:** Foundational–Intermediate. Mastered A/B testing workflow. Ready for regression.
-* **Data Visualization:** Foundational. Proficient in business-context charts. Next: interactive dashboards.
+* **SQL:** Advanced in optimization, **needs interview fundamentals**. Strong in CTEs/recursive queries. **Gap**: JOIN edge cases, window functions for business problems, data cleaning patterns.
+* **Statistics:** Foundational–Intermediate in A/B testing. **Major gap**: probability foundations, Bayes theorem, common distributions.
+* **Pandas:** Intermediate in manipulation. **Interview gap**: data cleaning workflows, EDA patterns, handling missing data.
+* **Business Analytics:** Strong in A/B testing methodology. **Gap**: customer metrics, cohort analysis, business metric interpretation.
 
 ### Recent Breakthrough
 
-**SQL Index Optimization (Sep 9, 2025)**: Mastered sargable rewrites including sign/zero-safe division handling and half-open time windows. Key insight: business logic determines edge case behavior (zero/negative values typically return FALSE).
+**SQL Index Optimization (Sep 9, 2025)**: Mastered sargable rewrites - advanced skill but not interview-critical. Need to refocus on fundamentals.
 
-### Previous Breakthrough
+### Interview Readiness Assessment
 
-Decisions require both statistical significance (the effect is real) and business significance (the effect is meaningful).
+**Strengths:**
+- Advanced SQL optimization knowledge
+- A/B testing methodology
+- Structured learning approach
+
+**Critical Gaps:**
+- SQL JOIN edge cases and NULL handling
+- Probability and statistics foundations
+- Business context for technical solutions
+- Pandas data cleaning workflows
+- Customer analytics metrics
 
 ### How I Learn Best
 
-* Need business context before technical exercises.
+* **Business context required first** - "Why does this business problem need this tool?"
 * Learn by struggling, failing, and being guided to solutions.
 * Statistical concepts require ground-up building; can't jump to complex formulas.
-
-### Teaching Philosophy Shift (added)
-
-* New mechanics must be **introduced as explicit extensions** of existing rules before being used in questioning.
-* Do not assume prior exposure in-session; show linkage, then quiz.
+* Need interview pressure simulation for timing and accuracy.
 
 ---
 
-## 5. Immediate Action Plan: Week 12 (Sep 8–14)
+## 5. Immediate Action Plan: Week 12 (Sep 15–21)
 
-**Weekly Goal:** Log 22 hours
+**Weekly Goal:** Log 22 hours with interview focus
 
 ### Key Tasks
 
-1. **Pandas Performance Optimization (6h):** Gate B - vectorization patterns, predicate pushdown, categorical dtypes.
-2. **Churn & Customer Analysis (8h):** Build cohort retention curves and start customer segmentation project.
-3. **SQL Optimization (4h):** Complete drills 171-180 (query optimization basics) - advanced patterns beyond sargability.
-4. **Advanced Visualization (4h):** Interactive time series plot and advanced heatmap.
+1. **SQL Interview Fundamentals (8h):** 
+   - JOIN scenarios with NULL handling and edge cases
+   - Window functions for business problems (running totals, rankings)
+   - Data cleaning patterns (duplicates, missing data, data types)
+
+2. **Probability Foundations (6h):**
+   - Bayes theorem with business applications
+   - Common probability distributions (normal, binomial, Poisson)
+   - Probability rules and combinatorics
+
+3. **Business Analytics (4h):**
+   - Customer cohort retention curves
+   - Basic churn analysis setup
+   - Metric interpretation and business significance
+
+4. **Pandas Interview Prep (3h):**
+   - Data cleaning workflow patterns
+   - Exploratory data analysis templates
+   - Missing data handling strategies
+
+5. **Mock Interview Setup (1h):**
+   - Create question bank tracking system
+   - Schedule first timed SQL challenge
 
 ---
 
@@ -154,93 +195,160 @@ Decisions require both statistical significance (the effect is real) and busines
 
 Root: `sql-dailies/`
 
-* `analysis/`: Project-based analyses (A/B testing, churn, employee data). Portfolio projects live here.
-* `sql/`: SQL practice drills, numbered sequentially.
-* `pandas/`: Pandas-specific deep-dives and performance case studies.
-* `visualizations/`: Chart and dashboard development notebooks.
+* `interview-prep/`: **NEW** - SQL question bank, timed challenges, mock interview materials
+* `analysis/`: Project-based analyses with business context emphasis
+* `sql/`: SQL practice drills, now organized by interview difficulty
+* `pandas/`: Interview-focused data cleaning and EDA patterns
+* `statistics/`: **NEW** - Probability foundations and statistical concepts
+* `visualizations/`: Business dashboard development
 
 ---
 
-## 7. Exit Stop-Rule System (New)
+## 7. Exit Stop-Rule System (Updated for Interview Focus)
 
 **Purpose:** Gate movement to the next concept. The exit rule is set at session start and **persists across sessions** until met. It can span multiple days.
 
-### 7.1 Exit Rule Template
+### 7.1 Active Exit Rule — SQL Interview Fundamentals
 
 * **Concept:** <topic>
 * **Checks (all must pass):**
 * **Status:** In progress / Passed (date).
 * **Next Concept on Pass:** <topic>
 
-### 7.2 Active Exit Rule — Pandas Performance
+### 7.2 Active Exit Rule 
 
+* **Concept:** SQL Interview Readiness
 * **Checks (must all pass):**
 
-  1. **Vectorization Patterns:**
-     * Replace row-wise `.apply()`/`.iterrows()` with: (a) `.map()`/`.merge()` for lookups, (b) boolean masks/`np.select()` for conditional logic, (c) `.groupby().transform()` for group-aware operations.
+  1. **JOIN Mastery:**
+     * Handle all JOIN types with NULL scenarios
+     * Solve complex multi-table business problems
+     * Explain when to use subqueries vs JOINs
 
-  2. **Optimization Strategy:**
-     * Demonstrate predicate pushdown before joins (filter early, join smaller).
-     * Use categorical dtypes for low-cardinality string columns.
+  2. **Window Functions for Business:**
+     * Running totals, moving averages for time series
+     * Ranking functions for top-N problems
+     * Lead/lag for period-over-period comparisons
 
-  3. **Performance Verification:**
-     * Benchmark with timing comparisons showing meaningful speedup.
-     * Include row count context and brief memory usage notes.
+  3. **Data Cleaning SQL:**
+     * Identify and remove duplicates
+     * Handle missing data with business context
+     * Data type conversion and validation
 
-* **Progress (Sep 9, 2025):**
-  * Vectorization Patterns: **PENDING**
-  * Optimization Strategy: **PENDING** 
-  * Performance Verification: **PENDING**
+* **Progress:**
+  * JOIN Mastery: **PENDING**
+  * Window Functions for Business: **PENDING** 
+  * Data Cleaning SQL: **PENDING**
 
 * **Status:** In progress.
-* **Next Concept on Pass:** **Advanced SQL patterns** — window functions with frames, lateral joins, and recursive CTE optimization.
+* **Next Concept on Pass:** **Probability Foundations**
 
 ### 7.3 Completed Exit Rules
 
 * **Gate A — SQL: Index Order & Sargability** ✅ **PASSED (Sep 9, 2025)**
-  * Paper Test Mastery: **PASSED** - equality-prefix → first ORDER BY key rule
-  * Rewrite to Sargable: **PASSED** - sign/zero-safe division + half-open time windows
-  * Plan Verification: **PASSED** - Index Scan, no Sort, Index Cond with equality + range
+  * Advanced skill - maintain but don't expand during interview prep
 
-### 7.4 Verification Protocol
+### 7.4 Upcoming Exit Rules
 
-* Start with conceptual understanding, then move to implementation.
-* Benchmark on realistic data sizes (10K+ rows minimum).
-* Document pattern statements and evidence for each successful optimization.
+**Gate C — Probability Foundations**
+- Bayes theorem applications
+- Distribution selection for business problems  
+- Hypothesis testing framework
+
+**Gate D — Business Analytics Core**
+- Customer cohort analysis
+- Churn prediction methodology
+- Business metric calculation and interpretation
+
+**Gate E — Interview Performance**
+- Timed SQL challenges (20 completed)
+- Mock interviews (5 completed)
+- Question bank mastery (100 questions)
+
+### 7.5 Verification Protocol
+
+* **Business context first:** Every technical solution must explain the business problem it solves
+* **Interview simulation:** Timed challenges and pressure testing
+* **Evidence required:** Pattern statements + business application examples
 
 ---
 
-## 8. Notes to Future Sessions
+## 8. Interview Question Bank (New Section)
 
+### SQL Questions by Difficulty
+**Beginner (Target: 30 questions)**
+- Basic JOINs and GROUP BY
+- Simple aggregations
+- WHERE clause filtering
+
+**Intermediate (Target: 40 questions)**  
+- Window functions
+- Complex JOINs with multiple conditions
+- Data cleaning scenarios
+
+**Advanced (Target: 30 questions)**
+- Recursive CTEs
+- Performance optimization
+- Complex business logic
+
+### Statistics & Probability Questions
+**Fundamentals (Target: 25 questions)**
+- Bayes theorem applications
+- Probability calculations
+- Distribution identification
+
+**Business Applications (Target: 25 questions)**
+- A/B test design and analysis
+- Customer metric interpretation
+- Statistical significance vs practical significance
+
+### Tracking System
+- Question difficulty: 1-5 scale
+- First attempt: Pass/Fail
+- Review needed: Yes/No
+- Business context: Industry/scenario
+
+---
+
+## 9. Notes to Future Sessions
+
+* **Business context mandatory:** No technical concept without business application
 * Maintain blunt, directive language. No soft asks or filler.
 * Do not reveal answers during exit tests. Provide tasks and pass criteria only.
-* Always tie new mechanics to existing rules explicitly before quizzing (**\[Extension]** label).
+* **Interview pressure simulation:** Include timing constraints and accuracy requirements
+* Track question bank progress alongside technical skill development
 
 ---
 
-## 9. Learning Model (Minimal)
+## 10. Learning Model (Updated)
 
 **Principles**
 
-* Ground-up learning: build from fundamentals; add new mechanics only as explicit **\[Extension]** to existing rules (explain → then question).
-* Discovery method: PASS / PASS (optimize) / FAIL with Socratic prompts; never write code for the learner.
-* Mastery is evidence-driven: persistent **Exit Gates** verified by plans/benchmarks.
+* **Business-first learning:** Every tool/concept starts with business problem context
+* **Interview-focused fundamentals:** Prioritize breadth in core concepts over depth in advanced topics
+* Ground-up learning: build from fundamentals; add new mechanics only as explicit **[Extension]** to existing rules
+* Discovery method: PASS / PASS (optimize) / FAIL with Socratic prompts; never write code for the learner
+* **Pressure testing:** Regular timed challenges and mock interview simulation
 
 **Artifacts**
 
-* Required: (1) **Pattern statement**; (2) **Evidence** (plan or benchmark).
-* Optional: 1-page business summary only when analysis informs a decision.
+* Required: (1) **Business context statement**; (2) **Technical pattern**; (3) **Interview application example**
+* Track: Question bank progress and interview readiness metrics
 
-**Exit Gates (persistent)**
+**Exit Gates (Interview-Focused)**
 
-* **Gate A — SQL: Index Order & Sargability** ✅ **PASSED (Sep 9, 2025)**
-* **Gate B — Pandas Performance** ✅ **PASSED (Sep 9, 2025)**  
-* **Gate C — Advanced SQL Patterns** ✅ **INTRODUCED (Sep 9, 2025)**
-* **Gate D — Statistical Modeling (active)**
-  * Regression foundations, model validation, business application.
-* **Gate E — Customer Analytics (next on pass)**
-  * Churn prediction, cohort analysis, segmentation.
+* **Gate A — SQL: Index Order & Sargability** ✅ **PASSED (Sep 9, 2025)** *(maintain, don't expand)*
+* **Gate B — SQL Interview Fundamentals** ✅ **ACTIVE**
+  * JOINs with edge cases, window functions for business, data cleaning
+* **Gate C — Probability Foundations** *(next on pass)*
+  * Bayes theorem, distributions, hypothesis testing
+* **Gate D — Business Analytics Core** 
+  * Customer metrics, cohort analysis, churn prediction
+* **Gate E — Interview Performance**
+  * Question bank completion, mock interviews, timing accuracy
 
 **Measurement**
 
-* Per-session log line only: Evidence link + Gate status (pass/fail + what's missing).
+* Per-session: Technical progress + interview readiness score
+* Weekly: Question bank completion rate + mock interview performance
+* Exit criteria: Can solve 80% of target-level interview questions within time limits
