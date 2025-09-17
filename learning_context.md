@@ -1,27 +1,27 @@
 # Data Analytics Learning Plan - Hybrid
 
-**Week 13, Day 1** | **146/300 hours logged** | **Last Updated:** September 15, 2025
+**Week 13, Day 3** | **158.88/300 hours logged** | **Last Updated:** September 17, 2025
 
 ---
 
 ## TODAY'S WORK (4 hours total)
 
-### 1. SQL JOINs Practice (2 hours)
+### 1. ✅ SQL JOINs Practice (2 hours) - COMPLETED
 - Work through 5-8 basic JOIN problems with business scenarios
 - Focus: INNER JOIN and LEFT JOIN with NULL handling
 - Practice problems involving customer data, sales records, or employee information
 - Track which problems you solved and difficulty level
 
-### 2. Probability Foundations (1 hour)
+### 2. ✅ Probability Foundations (1 hour) - COMPLETED
 - Learn basic probability rules (addition rule, multiplication rule)
 - Practice simple probability calculations with business context
 - Example scenarios: risk assessment, customer behavior prediction
 
-### 3. Customer Analytics Introduction (45 min)
+### 3. Customer Analytics Introduction (45 min) - IN PROGRESS
 - Read about customer retention metrics and cohort analysis concepts
 - Understand what cohort analysis measures and why businesses use it
 
-### 4. Question Bank Setup (15 min)
+### 4. Question Bank Setup (15 min) - PENDING
 - Create simple tracking for SQL problems solved today
 - Rate each problem: Easy/Medium/Hard
 - Note any patterns or difficulties encountered
@@ -32,12 +32,18 @@
 
 **Week 13 (Sep 15-21): SQL Fundamentals Start + Probability Introduction**
 
+**Week 13 Progress:** 13.84h / 22h target (62.9% complete)
+- Monday (Sep 15): 4.92h across 4 sessions
+- Tuesday (Sep 16): 4.09h across 2 sessions  
+- Wednesday (Sep 17): 4.83h across 4 sessions
+- Thursday-Sunday: Remaining 8.16h to complete weekly target
+
 **This Week's Goals (22 hours total):**
-- SQL JOINs fundamentals and edge cases (10h)
-- Probability foundations introduction (4h) 
-- Customer metrics introduction (4h)
-- Question bank development (2h)
-- Buffer/review time (2h)
+- SQL JOINs fundamentals and edge cases (10h) - **3.5h completed**
+- Probability foundations introduction (4h) - **1h completed** ✅
+- Customer metrics introduction (4h) - **0.75h in progress**
+- Question bank development (2h) - **Not started**
+- Buffer/review time (2h) - **6.59h other activities**
 
 **Active Gate:** SQL Interview Fundamentals (Week 1 of 4 expected)
 
@@ -103,7 +109,7 @@ Interview fundamentals first (SQL basics, probability, business metrics), then a
 * 0.5h Interview prep and question bank development
 
 ### Current Pacing
-Week 13 of 23 in an intensive 300-hour program. **On track** with 146/300 hours logged (48.7% complete).
+Week 13 of 23 in an intensive 300-hour program. **On track** with 158.88/300 hours logged (53.0% complete).
 
 ### High-Level Roadmap
 * **Weeks 13–16:** SQL Interview Fundamentals Gate (35-45h total) + Probability Foundations start (15-20h). Business metrics introduction.
@@ -117,27 +123,27 @@ Week 13 of 23 in an intensive 300-hour program. **On track** with 146/300 hours 
 
 ```
 SQL Interview Readiness
-Core JOINs & Aggregations ██░░░░░░░░░░░░░░░░░░░░  10% (8/80) ← Current focus
-├── JOIN Edge Cases      ░░░░░░░░░░░░░░░░░░░░   0% ← Week 13 target
-├── Window Functions     ████░░░░░░░░░░░░░░░░  20% ← Week 14-15 target
-└── Data Cleaning SQL    ░░░░░░░░░░░░░░░░░░░░   0% ← Week 15-16 target
+Core JOINs & Aggregations ████░░░░░░░░░░░░░░░░░░  20% (16/80) ← Week 13 progress
+├── JOIN Edge Cases      ██░░░░░░░░░░░░░░░░░░░░  10% ← Week 13 target
+├── Window Functions     ████░░░░░░░░░░░░░░░░░░  20% ← Week 14-15 target
+└── Data Cleaning SQL    ░░░░░░░░░░░░░░░░░░░░░░   0% ← Week 15-16 target
 
 Statistics & Probability
-Probability Foundations    ░░░░░░░░░░░░░░░░░░░░   0% (0/40) ← Starting this week
-├── Bayes Theorem        ░░░░░░░░░░░░░░░░░░░░   0% ← Week 15-16 target
-├── Distributions        ░░░░░░░░░░░░░░░░░░░░   0% ← Week 16-17 target
-└── Hypothesis Testing   ██████░░░░░░░░░░░░░░  30% ← A/B testing foundation exists
+Probability Foundations    █░░░░░░░░░░░░░░░░░░░░   5% (2/40) ← Week 13 progress ✅
+├── Bayes Theorem        ░░░░░░░░░░░░░░░░░░░░░░   0% ← Week 15-16 target
+├── Distributions        ░░░░░░░░░░░░░░░░░░░░░░   0% ← Week 16-17 target
+└── Hypothesis Testing   ██████░░░░░░░░░░░░░░░░  30% ← A/B testing foundation exists
 
 Business Analytics
-Customer Metrics           ██░░░░░░░░░░░░░░░░░░  10% (1/25) ← Introduction this week
-├── Cohort Analysis       ░░░░░░░░░░░░░░░░░░░░   0% ← Week 14-15 target
-├── Churn Prediction      ░░░░░░░░░░░░░░░░░░░░   0% ← Week 16-17 target
-└── A/B Testing          ████████████████████ 100% ← MASTERED
+Customer Metrics           ██░░░░░░░░░░░░░░░░░░░░  10% (2/25) ← Week 13 in progress
+├── Cohort Analysis       ░░░░░░░░░░░░░░░░░░░░░░   0% ← Week 14-15 target
+├── Churn Prediction      ░░░░░░░░░░░░░░░░░░░░░░   0% ← Week 16-17 target
+└── A/B Testing          ████████████████████████ 100% ← MASTERED
 
 Interview Preparation
-Question Bank             ░░░░░░░░░░░░░░░░░░░░   0% (0/100) ← Starting this week
-Mock Interviews           ░░░░░░░░░░░░░░░░░░░░   0% (0/10) ← Week 19+ target
-Timed SQL Challenges      ░░░░░░░░░░░░░░░░░░░░   0% (0/20) ← Week 17+ target
+Question Bank             ░░░░░░░░░░░░░░░░░░░░░░   0% (0/100) ← Week 13 target
+Mock Interviews           ░░░░░░░░░░░░░░░░░░░░░░   0% (0/10) ← Week 19+ target
+Timed SQL Challenges      ░░░░░░░░░░░░░░░░░░░░░░   0% (0/20) ← Week 17+ target
 ```
 
 ---
@@ -149,7 +155,7 @@ Timed SQL Challenges      ░░░░░░░░░░░░░░░░░░
 * **Status:** Week 1 of 4 (Started Sep 15, 2025)
 
 **Weekly Breakdown:**
-- **Week 1 (Current):** JOIN fundamentals and NULL edge cases (10-12h)
+- **Week 1 (Current):** JOIN fundamentals and NULL edge cases (10-12h) - **3.5h completed**
 - **Week 2:** Window functions for business problems (12-15h) 
 - **Week 3:** Data cleaning SQL patterns (8-10h)
 - **Week 4 (if needed):** Integration and complex scenarios (5-8h)
@@ -160,7 +166,7 @@ Timed SQL Challenges      ░░░░░░░░░░░░░░░░░░
 3. **Data Cleaning SQL (8-10h estimated):** Identify/remove duplicates, handle missing data with business context, data type conversion and validation
 
 **Progress Tracking:**
-* JOIN Mastery: **Week 1 - In Progress** (0/15h completed)
+* JOIN Mastery: **Week 1 - In Progress** (3.5/15h completed)
 * Window Functions: **Not Started** (0/15h completed)
 * Data Cleaning: **Not Started** (0/10h completed)
 
@@ -188,25 +194,25 @@ Timed SQL Challenges      ░░░░░░░░░░░░░░░░░░
 
 ### Proficiency Summary
 * **SQL:** Advanced in optimization, **needs interview fundamentals**. Strong in CTEs/recursive queries. **Gap**: JOIN edge cases, window functions for business problems, data cleaning patterns.
-* **Statistics:** Foundational–Intermediate in A/B testing. **Major gap**: probability foundations, Bayes theorem, common distributions.
+* **Statistics:** Foundational–Intermediate in A/B testing. **Recent progress**: Addition/multiplication rules mastered. **Gap**: probability foundations, Bayes theorem, common distributions.
 * **Pandas:** Intermediate in manipulation. **Interview gap**: data cleaning workflows, EDA patterns, handling missing data.
 * **Business Analytics:** Strong in A/B testing methodology. **Gap**: customer metrics, cohort analysis, business metric interpretation.
 
 ### Recent Breakthrough
-**SQL Index Optimization (Sep 9, 2025)**: Mastered sargable rewrites - advanced skill but not interview-critical. Successfully shifted focus to interview fundamentals.
+**Probability Foundations (Sep 17, 2025)**: Connected formal probability rules (addition/multiplication) to existing A/B testing knowledge. Successfully applied business context to mathematical concepts.
 
 ### Interview Readiness Assessment
 **Strengths:**
 - Advanced SQL optimization knowledge  
 - A/B testing methodology
 - Structured learning approach
+- Strong pace (53% complete, ahead of schedule)
 
 **Critical Gaps:**
-- SQL JOIN edge cases and NULL handling
-- Probability and statistics foundations
-- Business context for technical solutions
+- SQL JOIN edge cases and NULL handling (in progress)
+- Business context for technical solutions (improving)
+- Customer analytics metrics (starting)
 - Pandas data cleaning workflows
-- Customer analytics metrics
 
 ### How I Learn Best
 * **Business context required first** - "Why does this business problem need this tool?"
